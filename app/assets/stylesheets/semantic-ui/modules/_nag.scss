@@ -41,7 +41,7 @@ a.ui.nag {
 .ui.nag > .title {
   display: inline-block;
   margin: 0em 0.5em;
-  color: #ffffff;
+  color: $white;
 }
 .ui.nag > .close.icon {
   cursor: pointer;
@@ -51,7 +51,7 @@ a.ui.nag {
   right: 1em;
   font-size: 1em;
   margin: -0.5em 0em 0em;
-  color: #ffffff;
+  color: $white;
   -webkit-transition: opacity 0.2s ease;
           transition: opacity 0.2s ease;
 }

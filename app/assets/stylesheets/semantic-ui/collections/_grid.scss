@@ -1270,7 +1270,7 @@
 
 .ui.grid > .white.row,
 .ui.grid .white.column {
-  background-color: #ffffff !important;
+  background-color: $white !important;
   color: rgba(0, 0, 0, 0.8);
 }
 .ui.grid > .row > .white.column {
@@ -1281,8 +1281,8 @@
 }
 .ui.grid > .black.row,
 .ui.grid .black.column {
-  background-color: #1b1c1d !important;
-  color: #ffffff;
+  background-color: $black !important;
+  color: $white;
 }
 .ui.grid > .row > .black.column {
   margin-top: -1rem;
@@ -1293,7 +1293,7 @@
 .ui.grid > .blue.row,
 .ui.grid .blue.column {
   background-color: $blue !important;
-  color: #ffffff;
+  color: $white;
 }
 .ui.grid > .row > .blue.column {
   margin-top: -1rem;
@@ -1303,8 +1303,8 @@
 }
 .ui.grid > .green.row,
 .ui.grid .green.column {
-  background-color: #5bbd72 !important;
-  color: #ffffff;
+  background-color:$green !important;
+  color: $white;
 }
 .ui.grid > .row > .green.column {
   margin-top: -1rem;
@@ -1314,8 +1314,8 @@
 }
 .ui.grid > .orange.row,
 .ui.grid .orange.column {
-  background-color: #e07b53 !important;
-  color: #ffffff;
+  background-color: $orange !important;
+  color: $white;
 }
 .ui.grid > .row > .orange.column {
   margin-top: -1rem;
@@ -1325,8 +1325,8 @@
 }
 .ui.grid > .pink.row,
 .ui.grid .pink.column {
-  background-color: #d9499a !important;
-  color: #ffffff;
+  background-color: $pink !important;
+  color: $white;
 }
 .ui.grid > .row > .pink.column {
   margin-top: -1rem;
@@ -1336,8 +1336,8 @@
 }
 .ui.grid > .purple.row,
 .ui.grid .purple.column {
-  background-color: #564f8a !important;
-  color: #ffffff;
+  background-color: $purple !important;
+  color: $white;
 }
 .ui.grid > .row > .purple.column {
   margin-top: -1rem;
@@ -1347,8 +1347,8 @@
 }
 .ui.grid > .red.row,
 .ui.grid .red.column {
-  background-color: #d95c5c !important;
-  color: #ffffff;
+  background-color: $red !important;
+  color: $white;
 }
 .ui.grid > .row > .red.column {
   margin-top: -1rem;
@@ -1358,8 +1358,8 @@
 }
 .ui.grid > .teal.row,
 .ui.grid .teal.column {
-  background-color: #00b5ad !important;
-  color: #ffffff;
+  background-color: $teal !important;
+  color: $white;
 }
 .ui.grid > .row > .teal.column {
   margin-top: -1rem;
@@ -1369,8 +1369,8 @@
 }
 .ui.grid > .yellow.row,
 .ui.grid .yellow.column {
-  background-color: #f2c61f !important;
-  color: #ffffff;
+  background-color: $yellow !important;
+  color: $white;
 }
 .ui.grid > .row > .yellow.column {
   margin-top: -1rem;

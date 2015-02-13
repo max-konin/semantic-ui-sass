@@ -45,7 +45,7 @@
   top: 100%;
   margin: 0em;
   padding: 0em 0em;
-  background: #ffffff;
+  background: $white;
   min-width: 100%;
   white-space: nowrap;
   font-size: 1rem;
@@ -318,7 +318,7 @@
   -webkit-transform: rotateZ(0deg);
           transform: rotateZ(0deg);
   min-width: 180px;
-  background: #ffffff;
+  background: $white;
   display: inline-block;
   padding: 0.8em 1.1em;
   color: rgba(0, 0, 0, 0.8);
@@ -673,7 +673,7 @@ select.ui.dropdown {
   border-color: #dbb1b1;
 }
 .ui.dropdown.error > .menu > .item {
-  color: #d95c5c;
+  color: $red;
 }
 
 /* Item Hover */
@@ -890,7 +890,7 @@ select.ui.dropdown {
   width: 0.5em;
   height: 0.5em;
   box-shadow: -1px -1px 0px 1px rgba(0, 0, 0, 0.1);
-  background: #ffffff;
+  background: $white;
   z-index: 2;
 }
 .ui.pointing.dropdown > .menu:after {

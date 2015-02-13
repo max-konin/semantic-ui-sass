@@ -29,7 +29,7 @@
   line-height: 1.2;
   padding: 0.68571em 1em;
   font-size: 1em;
-  background: #ffffff;
+  background: $white;
   border: 1px solid rgba(39, 41, 43, 0.15);
   color: rgba(0, 0, 0, 0.8);
   box-shadow: 0em 0em 0em 0em transparent inset;
@@ -57,7 +57,7 @@
   position: absolute;
   top: 100%;
   left: 0%;
-  background: #ffffff;
+  background: $white;
   margin-top: 0.5em;
   width: 16em;
   border-radius: 0.25em;
@@ -118,7 +118,7 @@
 }
 .ui.search > .results .result .price {
   float: right;
-  color: #5bbd72;
+  color:$green;
 }
 
 /*--------------
@@ -255,7 +255,7 @@
 
 /* Category Result */
 .ui.category.search > .results .category .result {
-  background: #ffffff;
+  background: $white;
   margin-left: 100px;
   border-left: 1px solid rgba(39, 41, 43, 0.15);
   border-bottom: 1px solid rgba(39, 41, 43, 0.15);

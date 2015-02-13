@@ -239,8 +239,8 @@
 ---------------*/
 
 .ui.black.message {
-  background-color: #1b1c1d;
-  color: #ffffff;
+  background-color: $black;
+  color: $white;
 }
 
 /*--------------
@@ -329,8 +329,8 @@
 /* Colors */
 .ui.inverted.message,
 .ui.black.message {
-  background-color: #1b1c1d;
-  color: #ffffff;
+  background-color: $black;
+  color: $white;
 }
 .ui.blue.message {
   background-color: #dff0ff;
@@ -348,28 +348,28 @@
 }
 .ui.orange.message {
   background-color: #ffedde;
-  color: #e07b53;
+  color: $orange;
 }
 .ui.orange.message .header {
   color: #dc6a3d;
 }
 .ui.pink.message {
   background-color: #ffe3fb;
-  color: #d9499a;
+  color: $pink;
 }
 .ui.pink.message .header {
   color: #d5348e;
 }
 .ui.purple.message {
   background-color: #eae7ff;
-  color: #564f8a;
+  color: $purple;
 }
 .ui.purple.message .header {
   color: #4c467a;
 }
 .ui.red.message {
   background-color: #ffe8e6;
-  color: #d95c5c;
+  color: $red;
 }
 .ui.red.message .header {
   color: #d44747;

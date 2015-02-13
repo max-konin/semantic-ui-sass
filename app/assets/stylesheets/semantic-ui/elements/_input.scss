@@ -34,7 +34,7 @@
   line-height: 1.2142em;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   padding: 0.67861em 1em;
-  background: #ffffff;
+  background: $white;
   border: 1px solid rgba(0, 0, 0, 0.15);
   color: rgba(0, 0, 0, 0.8);
   border-radius: 0.2857rem;
@@ -115,7 +115,7 @@
 .ui.input.focus input,
 .ui.input input:focus {
   border-color: rgba(39, 41, 43, 0.3);
-  background: #ffffff;
+  background: $white;
   color: rgba(0, 0, 0, 0.8);
   box-shadow: none;
 }
@@ -135,7 +135,7 @@
 .ui.input.error input {
   background-color: #fff0f0;
   border-color: #dbb1b1;
-  color: #d95c5c;
+  color: $red;
   box-shadow: none;
 }
 
@@ -189,7 +189,7 @@
   color: rgba(255, 255, 255, 0.5);
 }
 .ui.transparent.inverted.input {
-  color: #ffffff;
+  color: $white;
 }
 .ui.transparent.inverted.input input {
   color: inherit;

@@ -196,34 +196,34 @@ i.bordered.inverted.icon {
 --------------------*/
 
 i.white.icon {
-  color: #ffffff !important;
+  color: $white !important;
 }
 i.black.icon {
-  color: #1b1c1d !important;
+  color: $black !important;
 }
 i.blue.icon {
   color: $blue !important;
 }
 i.green.icon {
-  color: #5bbd72 !important;
+  color:$green !important;
 }
 i.orange.icon {
-  color: #e07b53 !important;
+  color: $orange !important;
 }
 i.pink.icon {
-  color: #d9499a !important;
+  color: $pink !important;
 }
 i.purple.icon {
-  color: #564f8a !important;
+  color: $purple !important;
 }
 i.red.icon {
-  color: #d95c5c !important;
+  color: $red !important;
 }
 i.teal.icon {
-  color: #00b5ad !important;
+  color: $teal !important;
 }
 i.yellow.icon {
-  color: #f2c61f !important;
+  color: $yellow !important;
 }
 
 /*-------------------
@@ -231,7 +231,7 @@ i.yellow.icon {
 --------------------*/
 
 i.inverted.icon {
-  color: #ffffff;
+  color: $white;
 }
 i.inverted.black.icon {
   color: #333333 !important;
@@ -265,52 +265,52 @@ i.inverted.yellow.icon {
 i.inverted.bordered.icon,
 i.inverted.circular.icon {
   background-color: #222222 !important;
-  color: #FFFFFF !important;
+  color: $white !important;
 }
 i.inverted.bordered.black.icon,
 i.inverted.circular.black.icon {
-  background-color: #1b1c1d !important;
-  color: #FFFFFF !important;
+  background-color: $black !important;
+  color: $white !important;
 }
 i.inverted.bordered.blue.icon,
 i.inverted.circular.blue.icon {
   background-color: $blue !important;
-  color: #FFFFFF !important;
+  color: $white !important;
 }
 i.inverted.bordered.green.icon,
 i.inverted.circular.green.icon {
-  background-color: #5bbd72 !important;
-  color: #FFFFFF !important;
+  background-color:$green !important;
+  color: $white !important;
 }
 i.inverted.bordered.orange.icon,
 i.inverted.circular.orange.icon {
-  background-color: #e07b53 !important;
-  color: #FFFFFF !important;
+  background-color: $orange !important;
+  color: $white !important;
 }
 i.inverted.bordered.pink.icon,
 i.inverted.circular.pink.icon {
-  background-color: #d9499a !important;
-  color: #FFFFFF !important;
+  background-color: $pink !important;
+  color: $white !important;
 }
 i.inverted.bordered.purple.icon,
 i.inverted.circular.purple.icon {
-  background-color: #564f8a !important;
-  color: #FFFFFF !important;
+  background-color: $purple !important;
+  color: $white !important;
 }
 i.inverted.bordered.red.icon,
 i.inverted.circular.red.icon {
-  background-color: #d95c5c !important;
-  color: #FFFFFF !important;
+  background-color: $red !important;
+  color: $white !important;
 }
 i.inverted.bordered.teal.icon,
 i.inverted.circular.teal.icon {
-  background-color: #00b5ad !important;
-  color: #FFFFFF !important;
+  background-color: $teal !important;
+  color: $white !important;
 }
 i.inverted.bordered.yellow.icon,
 i.inverted.circular.yellow.icon {
-  background-color: #f2c61f !important;
-  color: #FFFFFF !important;
+  background-color: $yellow !important;
+  color: $white !important;
 }
 
 /*-------------------

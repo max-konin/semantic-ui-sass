@@ -245,10 +245,10 @@ h5.ui.header .sub.header {
 --------------------*/
 
 .ui.black.header {
-  color: #1b1c1d !important;
+  color: $black !important;
 }
 a.ui.black.header:hover {
-  color: #1b1c1d !important;
+  color: $black !important;
 }
 .ui.blue.header {
   color: $blue !important;
@@ -257,73 +257,73 @@ a.ui.blue.header:hover {
   color: #458ac6 !important;
 }
 .ui.green.header {
-  color: #5bbd72 !important;
+  color:$green !important;
 }
 a.ui.green.header:hover {
   color: #66c17b !important;
 }
 .ui.orange.header {
-  color: #e07b53 !important;
+  color: $orange !important;
 }
 a.ui.orange.header:hover {
   color: #e28560 !important;
 }
 .ui.pink.header {
-  color: #d9499a !important;
+  color: $pink !important;
 }
 a.ui.pink.header:hover {
   color: #dc56a1 !important;
 }
 .ui.purple.header {
-  color: #564f8a !important;
+  color: $purple !important;
 }
 a.ui.purple.header:hover {
   color: #5c5594 !important;
 }
 .ui.red.header {
-  color: #d95c5c !important;
+  color: $red !important;
 }
 a.ui.red.header:hover {
   color: #dc6868 !important;
 }
 .ui.teal.header {
-  color: #00b5ad !important;
+  color: $teal !important;
 }
 a.ui.teal.header:hover {
   color: #00c4bc !important;
 }
 .ui.yellow.header {
-  color: #f2c61f !important;
+  color: $yellow !important;
 }
 a.ui.yellow.header:hover {
   color: #f3ca2d !important;
 }
 .ui.black.dividing.header {
-  border-bottom: 2px solid #1b1c1d;
+  border-bottom: 2px solid $black;
 }
 .ui.blue.dividing.header {
   border-bottom: 2px solid $blue;
 }
 .ui.green.dividing.header {
-  border-bottom: 2px solid #5bbd72;
+  border-bottom: 2px solid$green;
 }
 .ui.orange.dividing.header {
-  border-bottom: 2px solid #e07b53;
+  border-bottom: 2px solid $orange;
 }
 .ui.pink.dividing.header {
-  border-bottom: 2px solid #d9499a;
+  border-bottom: 2px solid $pink;
 }
 .ui.purple.dividing.header {
-  border-bottom: 2px solid #564f8a;
+  border-bottom: 2px solid $purple;
 }
 .ui.red.dividing.header {
-  border-bottom: 2px solid #d95c5c;
+  border-bottom: 2px solid $red;
 }
 .ui.teal.dividing.header {
-  border-bottom: 2px solid #00b5ad;
+  border-bottom: 2px solid $teal;
 }
 .ui.yellow.dividing.header {
-  border-bottom: 2px solid #f2c61f;
+  border-bottom: 2px solid $yellow;
 }
 
 /*-------------------
@@ -331,7 +331,7 @@ a.ui.yellow.header:hover {
 --------------------*/
 
 .ui.inverted.header {
-  color: #ffffff;
+  color: $white;
 }
 .ui.inverted.header .sub.header {
   color: rgba(255, 255, 255, 0.85);
@@ -506,7 +506,7 @@ a.ui.inverted.yellow.header:hover {
 --------------------*/
 
 .ui.attached.header {
-  background: #ffffff;
+  background: $white;
   padding: 0.75rem 1rem;
   margin-left: -1px;
   margin-right: -1px;

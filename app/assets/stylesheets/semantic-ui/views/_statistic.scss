@@ -82,7 +82,7 @@
   font-size: 4rem;
   font-weight: normal;
   line-height: 1em;
-  color: #1b1c1d;
+  color: $black;
   text-transform: uppercase;
   text-align: center;
 }
@@ -208,37 +208,37 @@
 .ui.green.statistics .statistic > .value,
 .ui.statistics .green.statistic > .value,
 .ui.green.statistic > .value {
-  color: #5bbd72;
+  color:$green;
 }
 .ui.orange.statistics .statistic > .value,
 .ui.statistics .orange.statistic > .value,
 .ui.orange.statistic > .value {
-  color: #e07b53;
+  color: $orange;
 }
 .ui.pink.statistics .statistic > .value,
 .ui.statistics .pink.statistic > .value,
 .ui.pink.statistic > .value {
-  color: #d9499a;
+  color: $pink;
 }
 .ui.purple.statistics .statistic > .value,
 .ui.statistics .purple.statistic > .value,
 .ui.purple.statistic > .value {
-  color: #564f8a;
+  color: $purple;
 }
 .ui.red.statistics .statistic > .value,
 .ui.statistics .red.statistic > .value,
 .ui.red.statistic > .value {
-  color: #d95c5c;
+  color: $red;
 }
 .ui.teal.statistics .statistic > .value,
 .ui.statistics .teal.statistic > .value,
 .ui.teal.statistic > .value {
-  color: #00b5ad;
+  color: $teal;
 }
 .ui.yellow.statistics .statistic > .value,
 .ui.statistics .yellow.statistic > .value,
 .ui.yellow.statistic > .value {
-  color: #f2c61f;
+  color: $yellow;
 }
 
 /*--------------
@@ -262,7 +262,7 @@
 ---------------*/
 
 .ui.inverted.statistic .value {
-  color: #ffffff;
+  color: $white;
 }
 .ui.inverted.statistic .label {
   color: rgba(255, 255, 255, 0.8);
