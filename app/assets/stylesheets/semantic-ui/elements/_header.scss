@@ -251,7 +251,7 @@ a.ui.black.header:hover {
   color: #1b1c1d !important;
 }
 .ui.blue.header {
-  color: #3b83c0 !important;
+  color: $blue !important;
 }
 a.ui.blue.header:hover {
   color: #458ac6 !important;
@@ -302,7 +302,7 @@ a.ui.yellow.header:hover {
   border-bottom: 2px solid #1b1c1d;
 }
 .ui.blue.dividing.header {
-  border-bottom: 2px solid #3b83c0;
+  border-bottom: 2px solid $blue;
 }
 .ui.green.dividing.header {
   border-bottom: 2px solid #5bbd72;

@@ -1076,8 +1076,8 @@
 
 .ui.menu .blue.active.item,
 .ui.blue.menu .active.item {
-  border-color: #3b83c0 !important;
-  color: #3b83c0 !important;
+  border-color: $blue !important;
+  color: $blue !important;
 }
 .ui.menu .green.active.item,
 .ui.green.menu .active.item {
@@ -1257,10 +1257,10 @@
 
 /* Blue */
 .ui.inverted.blue.menu {
-  background-color: #3b83c0;
+  background-color: $blue;
 }
 .ui.inverted.blue.pointing.menu .active.item:after {
-  background-color: #3b83c0;
+  background-color: $blue;
 }
 
 /* Green */

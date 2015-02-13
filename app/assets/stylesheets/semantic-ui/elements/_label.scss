@@ -472,14 +472,14 @@ a.ui.black.label:hover:before {
 
 .ui.blue.labels .label,
 .ui.blue.label {
-  background-color: #3b83c0 !important;
-  border-color: #3b83c0 !important;
+  background-color: $blue !important;
+  border-color: $blue !important;
   color: #ffffff !important;
 }
 .ui.labels .blue.label:before,
 .ui.blue.labels .label:before,
 .ui.blue.label:before {
-  background-color: #3b83c0 !important;
+  background-color: $blue !important;
 }
 a.ui.blue.labels .label:hover,
 .ui.blue.labels a.label:hover,
