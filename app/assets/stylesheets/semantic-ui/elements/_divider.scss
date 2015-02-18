@@ -167,7 +167,7 @@ $element : 'divider';
 
   .ui.stackable.grid .ui.vertical.divider:before,
   .ui.grid .stackable.row .ui.vertical.divider:before {
-    margin-left: -(50% + $horizontalDividerMargin);
+    margin-left: - calc(50% + #{$horizontalDividerMargin});
   }
   .ui.stackable.grid .ui.vertical.divider:after,
   .ui.grid .stackable.row .ui.vertical.divider:after {

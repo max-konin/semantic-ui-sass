@@ -37,7 +37,7 @@ $element : 'button';
   font-family: $fontFamily;
 
   margin: 0em $horizontalMargin $verticalMargin 0em;
-  padding: $verticalPadding $horizontalPadding ($verticalPadding + $shadowOffset);
+  padding: $verticalPadding $horizontalPadding ($verticalPadding + #{$shadowOffset}em);
 
   text-transform: $textTransform;
   text-shadow: $textShadow;
@@ -547,15 +547,15 @@ $element : 'button';
 
 .ui.compact.buttons .button,
 .ui.compact.button {
-  padding: $compactVerticalPadding $compactHorizontalPadding ( $compactVerticalPadding + $shadowOffset );
+  padding: $compactVerticalPadding $compactHorizontalPadding ( $compactVerticalPadding + #{$shadowOffset}em );
 }
 .ui.compact.icon.buttons .button,
 .ui.compact.icon.button {
-  padding: $compactVerticalPadding $compactVerticalPadding ( $compactVerticalPadding + $shadowOffset );
+  padding: $compactVerticalPadding $compactVerticalPadding ( $compactVerticalPadding + #{$shadowOffset}em );
 }
 .ui.compact.labeled.icon.buttons .button,
 .ui.compact.labeled.icon.button {
-  padding: $compactVerticalPadding ($compactHorizontalPadding + $labeledIconWidth) ( $compactVerticalPadding + $shadowOffset );
+  padding: $compactVerticalPadding ($compactHorizontalPadding + $labeledIconWidth) ( $compactVerticalPadding + #{$shadowOffset}em );
 }
 
 /*-------------------
@@ -609,7 +609,7 @@ $element : 'button';
 
 .ui.icon.buttons .button,
 .ui.icon.button {
-  padding: $verticalPadding $verticalPadding ( $verticalPadding + $shadowOffset );
+  padding: $verticalPadding $verticalPadding ( $verticalPadding + #{$shadowOffset}em );
 }
 .ui.icon.buttons .button > .icon,
 .ui.icon.button > .icon {

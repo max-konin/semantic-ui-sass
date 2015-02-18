@@ -211,19 +211,19 @@ $element : 'loader';
 /* Text Loader */
 .ui.mini.text.loader {
   min-width: $mini;
-  padding-top: ($mini + $textDistance);
+  padding-top: (#{$mini}em + $textDistance);
 }
 .ui.small.text.loader {
   min-width: $small;
-  padding-top: ($small + $textDistance);
+  padding-top: (#{$small}em + $textDistance);
 }
 .ui.text.loader {
   min-width: $medium;
-  padding-top: ($medium + $textDistance);
+  padding-top: (#{$medium}em + $textDistance);
 }
 .ui.large.text.loader {
   min-width: $large;
-  padding-top: ($large + $textDistance);
+  padding-top: (#{$large}em + $textDistance);
 }
 
 
@@ -242,7 +242,7 @@ $element : 'loader';
 }
 
 /*-------------------
-       Inline
+       Inlinez
 --------------------*/
 
 .ui.inline.loader {

@@ -818,7 +818,7 @@
 
 .ui.secondary.pointing.menu > .menu > .item,
 .ui.secondary.pointing.menu > .item {
-  margin: 0em 0em -$secondaryPointingBorderWidth;
+  margin: 0em 0em (-$secondaryPointingBorderWidth);
   padding: $secondaryPointingVerticalPadding $secondaryPointingHorizontalPadding;
   border-bottom: $secondaryPointingBorderWidth solid transparent;
   border-radius: 0em;
@@ -874,7 +874,7 @@
   border-right: $secondaryPointingBorderWidth solid rgba(0, 0, 0, 0.1);
 }
 .ui.secondary.vertical.pointing.menu > .item {
-  margin: 0em -$secondaryPointingBorderWidth 0em 0em;
+  margin: 0em (-$secondaryPointingBorderWidth) 0em 0em;
   border-bottom: none;
   border-right: $secondaryPointingBorderWidth solid transparent;
   border-radius: 0em;
@@ -1527,7 +1527,7 @@
   left: auto;
 
   transform: translateX(50%) translateY(-50%) rotate(45deg);
-  margin: 0em -$arrowBorderSize 0em 0em;
+  margin: 0em (-$arrowBorderSize) 0em 0em;
 
   border: none;
   border-top: $arrowBorder;
