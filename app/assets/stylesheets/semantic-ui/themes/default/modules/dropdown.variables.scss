@@ -151,7 +151,7 @@ $selectionWidescreenMaxItems: 8;
 
 /* Derived */
 $selectedBorderEMWidth: 0.0714em;
-$selectionItemActualHeight: ($itemVerticalPadding * 2) + $itemLineHeight + $selectedBorderEMWidth;
+$selectionItemActualHeight: (($itemVerticalPadding * 2em / 1rem) + $itemLineHeight + $selectedBorderEMWidth);
 $selectionMobileMaxMenuHeight: ($selectionItemActualHeight * $selectionMobileMaxItems);
 $selectionTabletMaxMenuHeight: ($selectionItemActualHeight * $selectionTabletMaxItems);
 $selectionComputerMaxMenuHeight: ($selectionItemActualHeight * $selectionComputerMaxItems);

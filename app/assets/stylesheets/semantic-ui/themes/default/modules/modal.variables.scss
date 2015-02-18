@@ -61,7 +61,7 @@ $actionAlign: right;
 $buttonDistance: 0.75em;
 
 /* Inner Close Position (Tablet/Mobile) */
-$innerCloseTop: ($headerVerticalPadding - $closeHitBoxOffset + ($lineHeight - 1em));
+$innerCloseTop: ($headerVerticalPadding - $closeHitBoxOffset + ($lineHeight - #{1em}rem));
 $innerCloseRight: 1rem;
 $innerCloseColor: $textColor;
 
@@ -84,11 +84,11 @@ $computerWidth: 74%;
 $largeMonitorWidth: 56%;
 $widescreenMonitorWidth: 42%;
 
-$mobileMargin: 0em 0em 0em -($mobileWidth / 2);
-$tabletMargin: 0em 0em 0em -($tabletWidth / 2);
-$computerMargin: 0em 0em 0em -($computerWidth / 2);
-$largeMonitorMargin: 0em 0em 0em -($largeMonitorWidth / 2);
-$widescreenMonitorMargin: 0em 0em 0em -($widescreenMonitorWidth / 2);
+$mobileMargin: 0em 0em 0em (-($mobileWidth / 2));
+$tabletMargin: 0em 0em 0em (-($tabletWidth / 2));
+$computerMargin: 0em 0em 0em (-($computerWidth / 2));
+$largeMonitorMargin: 0em 0em 0em (-($largeMonitorWidth / 2));
+$widescreenMonitorMargin: 0em 0em 0em (-($widescreenMonitorWidth / 2));
 
 $fullScreenWidth: 95%;
 $fullScreenOffset: (100% - $fullScreenWidth) / 2;
@@ -125,11 +125,11 @@ $smallComputerWidth: ($computerWidth * $smallRatio);
 $smallLargeMonitorWidth: ($largeMonitorWidth * $smallRatio);
 $smallWidescreenMonitorWidth: ($widescreenMonitorWidth * $smallRatio);
 
-$smallMobileMargin: 0em 0em 0em -($smallMobileWidth / 2);
-$smallTabletMargin: 0em 0em 0em -($smallTabletWidth / 2);
-$smallComputerMargin: 0em 0em 0em -($smallComputerWidth / 2);
-$smallLargeMonitorMargin: 0em 0em 0em -($smallLargeMonitorWidth / 2);
-$smallWidescreenMonitorMargin: 0em 0em 0em -($smallWidescreenMonitorWidth / 2);
+$smallMobileMargin: 0em 0em 0em (-($smallMobileWidth / 2));
+$smallTabletMargin: 0em 0em 0em (-($smallTabletWidth / 2));
+$smallComputerMargin: 0em 0em 0em (-($smallComputerWidth / 2));
+$smallLargeMonitorMargin: 0em 0em 0em (-($smallLargeMonitorWidth / 2));
+$smallWidescreenMonitorMargin: 0em 0em 0em (-($smallWidescreenMonitorWidth / 2));
 
 $largeHeaderSize: 1.6em;
 $largeMobileWidth: $mobileWidth;
@@ -138,8 +138,8 @@ $largeComputerWidth: ($computerWidth * $largeRatio);
 $largeLargeMonitorWidth: ($largeMonitorWidth * $largeRatio);
 $largeWidescreenMonitorWidth: ($widescreenMonitorWidth * $largeRatio);
 
-$largeMobileMargin: 0em 0em 0em -($largeMobileWidth / 2);
-$largeTabletMargin: 0em 0em 0em -($largeTabletWidth / 2);
-$largeComputerMargin: 0em 0em 0em -($largeComputerWidth / 2);
-$largeLargeMonitorMargin: 0em 0em 0em -($largeLargeMonitorWidth / 2);
-$largeWidescreenMonitorMargin: 0em 0em 0em -($largeWidescreenMonitorWidth / 2);
+$largeMobileMargin: 0em 0em 0em (-($largeMobileWidth / 2));
+$largeTabletMargin: 0em 0em 0em (-($largeTabletWidth / 2));
+$largeComputerMargin: 0em 0em 0em (-($largeComputerWidth / 2));
+$largeLargeMonitorMargin: 0em 0em 0em (-($largeLargeMonitorWidth / 2));
+$largeWidescreenMonitorMargin: 0em 0em 0em (-($largeWidescreenMonitorWidth / 2));

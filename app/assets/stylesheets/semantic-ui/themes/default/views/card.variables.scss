@@ -123,7 +123,7 @@ $extraLinkColor: $unselectedTextColor;
 $extraLinkHoverColor: $linkHoverColor;
 
 /* Buttons */
-$buttonMargin: 0em -$borderWidth -$shadowDistance;
+$buttonMargin: 0em (-$borderWidth ) (-$shadowDistance);
 // TODO: I don't know what is ~ in less
 //$buttonWidth: #{"calc(100% + "($borderWidth * 2)~")"};
 $buttonWidth: #{"calc(100% + "($borderWidth * 2)")"};

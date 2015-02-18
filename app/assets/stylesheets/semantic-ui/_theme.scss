@@ -28,10 +28,10 @@ $themesFolder: 'themes';
 /*------------------
        Fonts
 -------------------*/
-//
-//@mixin loadFonts() when (@importGoogleFonts)
+////
+//@mixin loadFonts()
 //{
-//  @import (css) '${googleProtocol}fonts.googleapis.com/css?family=${googleFontRequest}';
+//  @import "#{$googleProtocol}fonts.googleapis.com/css?family=#{$googleFontRequest}";
 //}
 
 ///*------------------
