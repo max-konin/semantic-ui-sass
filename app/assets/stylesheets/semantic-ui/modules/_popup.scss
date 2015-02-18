@@ -1,14 +1,22 @@
- /*
- * # Semantic UI - 1.8.1
- * https://github.com/Semantic-Org/Semantic-UI
- * http://www.semantic-ui.com/
+/*
+ * # Semantic - Popup
+ * http://github.com/semantic-org/semantic-ui/
  *
- * Copyright 2014 Contributors
+ *
+ * Copyright 2014 Contributor
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
  */
 
+/*******************************
+            Theme
+*******************************/
+
+$type    : 'module';
+$element : 'popup';
+
+// @import '../../theme.config';
 
 
 /*******************************
@@ -20,48 +28,52 @@
   position: absolute;
   top: 0px;
   right: 0px;
-  
-/* Fixes content being squished when inline (moz only) */
+
+  /* Fixes content being squished when inline (moz only) */
   min-width: -moz-max-content;
-  z-index: 1900;
-  border: 1px solid $grey;
-  max-width: 250px;
-  background-color: $white;
-  padding: 0.833em 1em;
-  font-weight: normal;
-  font-style: normal;
-  color: rgba(0, 0, 0, 0.8);
-  border-radius: 0.2857rem;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+  z-index: $zIndex;
+
+  border: $border;
+  max-width: $maxWidth;
+  background-color: $background;
+
+  padding: $verticalPadding $horizontalPadding;
+  font-weight: $fontWeight;
+  font-style: $fontStyle;
+  color: $color;
+
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
 }
 .ui.popup > .header {
   padding: 0em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-size: 1.125em;
-  line-height: 1.2;
+
+  font-family: $headerFont;
+  font-size: $headerFontSize;
+  line-height: $headerLineHeight;
   font-weight: bold;
 }
 .ui.popup > .header + .content {
-  padding-top: 0.5em;
+  padding-top: $headerDistance;
 }
+
 .ui.popup:before {
   position: absolute;
   content: '';
-  width: 0.75em;
-  height: 0.75em;
-  background: $white;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  z-index: 2;
-  box-shadow: 1px 1px 0px 0px #b3b3b3;
-}
+  width: $arrowSize;
+  height: $arrowSize;
 
+  background: $arrowBackground;
+  transform: rotate(45deg);
+
+  z-index: $arrowZIndex;
+  box-shadow: $arrowBoxShadow;
+}
 
 /*******************************
             Types
 *******************************/
-
 
 /*--------------
      Spacing
@@ -71,121 +83,114 @@
   margin: 0em;
 }
 .ui.popup.bottom {
-  margin: 0.75em 0em 0em;
+  margin: $popupDistanceAway 0em 0em;
 }
 .ui.popup.top {
-  margin: 0em 0em 0.75em;
+  margin: 0em 0em $popupDistanceAway;
 }
 .ui.popup.left.center {
-  margin: 0em 0.75em 0em 0em;
+  margin: 0em $popupDistanceAway 0em 0em;
 }
 .ui.popup.right.center {
-  margin: 0em 0em 0em 0.75em;
+  margin: 0em 0em 0em $popupDistanceAway;
 }
 
 /*--------------
      Pointer
 ---------------*/
 
-
 /*--- Below ---*/
-
 .ui.bottom.center.popup:before {
-  margin-left: -0.325em;
-  top: -0.325em;
+  margin-left: $arrowOffset;
+  top: $arrowOffset;
   left: 50%;
   right: auto;
   bottom: auto;
-  box-shadow: -1px -1px 0px 0px #b3b3b3;
+  box-shadow: $bottomArrowBoxShadow;
 }
+
 .ui.bottom.left.popup {
-  margin-left: 0em;
+  margin-left: $boxArrowOffset;
 }
 .ui.bottom.left.popup:before {
-  top: -0.325em;
-  left: 1em;
+  top: $arrowOffset;
+  left: $arrowDistanceFromEdge;
   right: auto;
   bottom: auto;
   margin-left: 0em;
-  box-shadow: -1px -1px 0px 0px #b3b3b3;
+  box-shadow: $bottomArrowBoxShadow;
 }
+
 .ui.bottom.right.popup {
-  margin-right: 0em;
+  margin-right: $boxArrowOffset;
 }
 .ui.bottom.right.popup:before {
-  top: -0.325em;
-  right: 1em;
+  top: $arrowOffset;
+  right: $arrowDistanceFromEdge;
   bottom: auto;
   left: auto;
   margin-left: 0em;
-  box-shadow: -1px -1px 0px 0px #b3b3b3;
+  box-shadow: $bottomArrowBoxShadow;
 }
 
 /*--- Above ---*/
-
 .ui.top.center.popup:before {
   top: auto;
   right: auto;
-  bottom: -0.325em;
+  bottom: $arrowOffset;
   left: 50%;
-  margin-left: -0.325em;
+  margin-left: $arrowOffset;
 }
 .ui.top.left.popup {
-  margin-left: 0em;
+  margin-left: $boxArrowOffset;
 }
 .ui.top.left.popup:before {
-  bottom: -0.325em;
-  left: 1em;
+  bottom: $arrowOffset;
+  left: $arrowDistanceFromEdge;
   top: auto;
   right: auto;
   margin-left: 0em;
 }
 .ui.top.right.popup {
-  margin-right: 0em;
+  margin-right: $boxArrowOffset;
 }
 .ui.top.right.popup:before {
-  bottom: -0.325em;
-  right: 1em;
+  bottom: $arrowOffset;
+  right: $arrowDistanceFromEdge;
   top: auto;
   left: auto;
   margin-left: 0em;
 }
 
 /*--- Left Center ---*/
-
 .ui.left.center.popup:before {
   top: 50%;
-  right: -0.325em;
+  right: $arrowOffset;
   bottom: auto;
   left: auto;
-  margin-top: -0.325em;
-  box-shadow: 1px -1px 0px 0px #b3b3b3;
+  margin-top: $arrowOffset;
+  box-shadow: $leftArrowBoxShadow;
 }
 
 /*--- Right Center  ---*/
-
 .ui.right.center.popup:before {
   top: 50%;
-  left: -0.325em;
+  left: $arrowOffset;
   bottom: auto;
   right: auto;
-  margin-top: -0.325em;
-  box-shadow: -1px 1px 0px 0px #b3b3b3;
+  margin-top: $arrowOffset;
+  box-shadow: $rightArrowBoxShadow;
 }
-
 
 /*******************************
             Coupling
 *******************************/
 
-
 /* Immediate Nested Grid */
 .ui.popup > .ui.grid:not(.padded) {
-  width: -webkit-calc(100% + 1.75rem);
-  width: calc(100% + 1.75rem);
-  margin: -0.7rem -0.875rem;
+  width: $nestedGridWidth;
+  margin: $nestedGridMargin;
 }
-
 
 /*******************************
             States
@@ -194,8 +199,9 @@
 .ui.loading.popup {
   display: block;
   visibility: hidden;
-  z-index: -1;
+  z-index: $loadingZIndex;
 }
+
 .ui.animating.popup,
 .ui.visible.popup {
   display: block;
@@ -206,7 +212,6 @@
             Variations
 *******************************/
 
-
 /*--------------
      Basic
 ---------------*/
@@ -215,16 +220,18 @@
   display: none;
 }
 
+
 /*--------------
      Wide
 ---------------*/
 
 .ui.wide.popup {
-  max-width: 350px;
+  max-width: $wideWidth;
 }
 .ui[class*="very wide"].popup {
-  max-width: 550px;
+  max-width: $veryWideWidth;
 }
+
 
 /*--------------
      Fluid
@@ -235,24 +242,24 @@
   max-width: none;
 }
 
+
 /*--------------
      Colors
 ---------------*/
 
-
 /* Inverted colors  */
 .ui.inverted.popup {
-  background: $black;
-  color: $white;
-  border: none;
-  box-shadow: none;
+  background: $invertedBackground;
+  color: $invertedColor;
+  border: $invertedBorder;
+  box-shadow: $invertedBoxShadow;
 }
 .ui.inverted.popup .header {
-  background-color: none;
-  color: $white;
+  background-color: $invertedHeaderBackground;
+  color: $invertedHeaderColor;
 }
 .ui.inverted.popup:before {
-  background-color: $black;
+  background-color: $invertedArrowColor;
   box-shadow: none !important;
 }
 
@@ -264,31 +271,23 @@
   max-width: none;
 }
 
+
 /*--------------
      Sizes
 ---------------*/
 
 .ui.small.popup {
-  font-size: 0.785714rem;
+  font-size: $small;
 }
 .ui.popup {
-  font-size: 0.85714rem;
+  font-size: $medium;
 }
 .ui.large.popup {
-  font-size: 1rem;
+  font-size: $large;
 }
 .ui.huge.popup {
-  font-size: 1.14285rem;
+  font-size: $huge;
 }
 
 
-/*******************************
-         Theme Overrides
-*******************************/
-
-
-
-/*******************************
-        User Overrides
-*******************************/
-
+@include loadUIOverrides();

@@ -1,14 +1,22 @@
  /*
- * # Semantic UI - 1.8.1
- * https://github.com/Semantic-Org/Semantic-UI
- * http://www.semantic-ui.com/
+ * # Semantic - Video
+ * http://github.com/semantic-org/semantic-ui/
  *
- * Copyright 2014 Contributors
+ *
+ * Copyright 2014 Contributor
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
  */
 
+/*******************************
+            Theme
+*******************************/
+
+$type    : 'module';
+$element : 'video';
+
+// @import '../../theme.config';
 
 
 /*******************************
@@ -16,7 +24,8 @@
 *******************************/
 
 .ui.video {
-  background-color: #dddddd;
+  position: relative;
+  background-color: $background;
   position: relative;
   max-width: 100%;
   padding-bottom: 56.25%;
@@ -28,10 +37,9 @@
      Content
 ---------------*/
 
-
 /* Placeholder Image */
 .ui.video .placeholder {
-  background-color: #333333;
+  background-color: $placeholderBackground;
 }
 
 /* Play Icon Overlay */
@@ -41,29 +49,32 @@
   top: 0px;
   left: 0px;
   z-index: 10;
+
   width: 100%;
   height: 100%;
-  opacity: 0.8;
-  -webkit-transition: opacity 0.3s;
-          transition: opacity 0.3s;
+
+  opacity: $playOpacity;
+  transition: opacity 0.3s;
 }
 .ui.video .play.icon:before {
   position: absolute;
   top: 50%;
   left: 50%;
   z-index: 11;
-  background: rgba(0, 0, 0, 0.3);
-  width: 8rem;
-  height: 8rem;
-  line-height: 8rem;
-  border-radius: 500rem;
-  color: $white;
-  font-size: 8rem;
-  text-shadow: none;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-      -ms-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+
+  background: $playBackground;
+
+  width: ($playSize + $playBorderSize);
+  height: ($playSize + $playBorderSize);
+  line-height: ($playSize + $playBorderSize);
+  border-radius: $playBorderRadius;
+
+  color: $playColor;
+  font-size: $playSize;
+  text-shadow: $playShadow;
+  transform: translateX(-50%) translateY(-50%);
 }
+
 .ui.video .placeholder {
   position: absolute;
   top: 0px;
@@ -87,18 +98,16 @@
   padding: 0em;
 }
 
-
 /*******************************
             States
 *******************************/
-
 
 /*--------------
     Hover
 ---------------*/
 
 .ui.video .play:hover {
-  opacity: 1;
+  opacity: $playHoverOpacity;
 }
 
 /*--------------
@@ -113,14 +122,4 @@
   display: inline;
 }
 
-
-/*******************************
-        Video Overrides
-*******************************/
-
-
-
-/*******************************
-         Site Overrides
-*******************************/
-
+@include loadUIOverrides();

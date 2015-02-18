@@ -1,7 +1,7 @@
  /*
- * # Semantic UI - 1.8.1
- * https://github.com/Semantic-Org/Semantic-UI
- * http://www.semantic-ui.com/
+ * # Semantic - Statistic
+ * http://github.com/semantic-org/semantic-ui/
+ *
  *
  * Copyright 2014 Contributors
  * Released under the MIT license
@@ -9,22 +9,30 @@
  *
  */
 
+/*******************************
+            Theme
+*******************************/
 
+$type    : 'view';
+$element : 'statistic';
+
+// @import '../../theme.config';
 
 /*******************************
            Statistic
 *******************************/
 
-
 /* Standalone */
 .ui.statistic {
-  display: inline-block;
-  margin: 1em 0em;
-  max-width: 175px;
+  display: $display;
+  margin: $margin;
+  max-width: $maxWidth;
 }
+
 .ui.statistic + .ui.statistic {
-  margin: 0em 0em 0em 1em;
+  margin: 0em 0em 0em $horizontalSpacing;
 }
+
 .ui.statistic:first-child {
   margin-top: 0em;
 }
@@ -34,10 +42,10 @@
 
 /* Grouped */
 .ui.statistics > .statistic {
-  display: block;
-  float: left;
-  margin: 0em 1em 2em;
-  max-width: 175px;
+  display: $elementDisplay;
+  float: $elementFloat;
+  margin: $elementMargin;
+  max-width: $elementMaxWidth;
 }
 
 
@@ -46,8 +54,8 @@
 *******************************/
 
 .ui.statistics {
-  display: block;
-  margin: 1em -1em;
+  display: $groupDisplay;
+  margin: $groupMargin;
 }
 
 /* Clearing */
@@ -59,6 +67,7 @@
   overflow: hidden;
   visibility: hidden;
 }
+
 .ui.statistics:first-child {
   margin-top: 0em;
 }
@@ -78,13 +87,13 @@
 
 .ui.statistics .statistic > .value,
 .ui.statistic > .value {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-size: 4rem;
-  font-weight: normal;
-  line-height: 1em;
-  color: $black;
-  text-transform: uppercase;
-  text-align: center;
+  font-family: $valueFont;
+  font-size: $valueSize;
+  font-weight: $valueFontWeight;
+  line-height: $valueLineHeight;
+  color: $valueColor;
+  text-transform: $valueTextTransform;
+  text-align: $textAlign;
 }
 
 /*--------------
@@ -93,31 +102,31 @@
 
 .ui.statistics .statistic > .label,
 .ui.statistic > .label {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  font-weight: normal;
-  color: rgba(0, 0, 0, 0.4);
-  text-transform: none;
-  text-align: center;
+  font-family: $labelFont;
+  font-size: $labelSize;
+  font-weight: $labelFontWeight;
+  color: $labelColor;
+  text-transform: $labelTextTransform;
+  text-align: $textAlign;
 }
 
 /* Top Label */
 .ui.statistics .statistic > .label ~ .value,
 .ui.statistic > .label ~ .value {
-  margin-top: 0rem;
+  margin-top: $topLabelDistance;
 }
 
 /* Bottom Label */
 .ui.statistics .statistic > .value ~ .label,
 .ui.statistic > .value ~ .label {
-  margin-top: 0.25rem;
+  margin-top: $bottomLabelDistance;
 }
+
 
 
 /*******************************
              Types
 *******************************/
-
 
 /*--------------
    Icon Value
@@ -136,8 +145,8 @@
 
 .ui.statistics .statistic > .text.value,
 .ui.statistic > .text.value {
-  line-height: 1em;
-  min-height: 2em;
+  line-height: $textLabelLineHeight;
+  min-height: $textLabelMinHeight;
   text-align: center;
 }
 .ui.statistics .statistic > .text.value + .label,
@@ -151,15 +160,15 @@
 
 .ui.statistics .statistic > .value img,
 .ui.statistic > .value img {
-  max-height: 3rem;
-  vertical-align: baseline;
+  max-height: $imageHeight;
+  vertical-align: $imageVerticalAlign;
 }
+
 
 
 /*******************************
             Variations
 *******************************/
-
 
 /*--------------
    Horizontal
@@ -173,17 +182,19 @@
 }
 .ui.horizontal.statistics .statistic {
   float: none;
-  margin: 1em 0em;
+  margin: $horizontalGroupElementMargin;
   max-width: 9999px;
 }
+
 .ui.horizontal.statistic > .text.value,
 .ui.horizontal.statistics > .statistic > .text.value {
   min-height: 0em !important;
 }
 .ui.horizontal.statistics .statistic > .value .icon,
 .ui.horizontal.statistic > .value .icon {
-  width: 1.18em;
+  width: $iconWidth;
 }
+
 .ui.horizontal.statistics .statistic > .value,
 .ui.horizontal.statistic > .value {
   display: inline-block;
@@ -193,7 +204,7 @@
 .ui.horizontal.statistic > .label {
   display: inline-block;
   vertical-align: middle;
-  margin: 0em 0em 0em 0.75em;
+  margin: 0em 0em 0em $horizontalLabelDistance;
 }
 
 /*--------------
@@ -208,7 +219,7 @@
 .ui.green.statistics .statistic > .value,
 .ui.statistics .green.statistic > .value,
 .ui.green.statistic > .value {
-  color:$green;
+  color: $green;
 }
 .ui.orange.statistics .statistic > .value,
 .ui.statistics .orange.statistic > .value,
@@ -247,11 +258,11 @@
 
 .ui[class*="left floated"].statistic {
   float: left;
-  margin: 0em 2em 1em 0em;
+  margin: $leftFloatedMargin;
 }
 .ui[class*="right floated"].statistic {
   float: right;
-  margin: 0em 0em 1em 2em;
+  margin: $rightFloatedMargin;
 }
 .ui.floated.statistic:last-child {
   margin-bottom: 0em;
@@ -262,50 +273,51 @@
 ---------------*/
 
 .ui.inverted.statistic .value {
-  color: $white;
+  color: $invertedValueColor;
 }
 .ui.inverted.statistic .label {
-  color: rgba(255, 255, 255, 0.8);
+  color: $invertedLabelColor;
 }
+
 .ui.inverted.blue.statistics .statistic > .value,
 .ui.statistics .inverted.blue.statistic > .value,
 .ui.inverted.blue.statistic > .value {
-  color: #54c8ff;
+  color: $lightBlue;
 }
 .ui.inverted.green.statistics .statistic > .value,
 .ui.statistics .inverted.green.statistic > .value,
 .ui.inverted.green.statistic > .value {
-  color: #2ecc40;
+  color: $lightGreen;
 }
 .ui.inverted.orange.statistics .statistic > .value,
 .ui.statistics .inverted.orange.statistic > .value,
 .ui.inverted.orange.statistic > .value {
-  color: #ff851b;
+  color: $lightOrange;
 }
 .ui.inverted.pink.statistics .statistic > .value,
 .ui.statistics .inverted.pink.statistic > .value,
 .ui.inverted.pink.statistic > .value {
-  color: #ff8edf;
+  color: $lightPink;
 }
 .ui.inverted.purple.statistics .statistic > .value,
 .ui.statistics .inverted.purple.statistic > .value,
 .ui.inverted.purple.statistic > .value {
-  color: #cdc6ff;
+  color: $lightPurple;
 }
 .ui.inverted.red.statistics .statistic > .value,
 .ui.statistics .inverted.red.statistic > .value,
 .ui.inverted.red.statistic > .value {
-  color: #ff695e;
+  color: $lightRed;
 }
 .ui.inverted.teal.statistics .statistic > .value,
 .ui.statistics .inverted.teal.statistic > .value,
 .ui.inverted.teal.statistic > .value {
-  color: #6dffff;
+  color: $lightTeal;
 }
 .ui.inverted.yellow.statistics .statistic > .value,
 .ui.statistics .inverted.yellow.statistic > .value,
 .ui.inverted.yellow.statistic > .value {
-  color: #ffe21f;
+  color: $lightYellow;
 }
 
 /*--------------
@@ -316,95 +328,89 @@
 /* Mini */
 .ui.mini.statistics .statistic > .value,
 .ui.mini.statistic > .value {
-  font-size: 1.5rem;
+  font-size: $miniValueSize;
 }
 .ui.mini.horizontal.statistics .statistic > .value,
 .ui.mini.horizontal.statistic > .value {
-  font-size: 1.5rem;
+  font-size: $miniHorizontalValueSize;
 }
 .ui.mini.statistics .statistic > .text.value,
 .ui.mini.statistic > .text.value {
-  font-size: 1rem;
+  font-size: $miniTextLabelSize;
 }
+
 
 /* Tiny */
 .ui.tiny.statistics .statistic > .value,
 .ui.tiny.statistic > .value {
-  font-size: 2rem;
+  font-size: $tinyValueSize;
 }
 .ui.tiny.horizontal.statistics .statistic > .value,
 .ui.tiny.horizontal.statistic > .value {
-  font-size: 2rem;
+  font-size: $tinyHorizontalValueSize;
 }
 .ui.tiny.statistics .statistic > .text.value,
 .ui.tiny.statistic > .text.value {
-  font-size: 1rem;
+  font-size: $tinyTextLabelSize;
 }
 
 /* Small */
 .ui.small.statistics .statistic > .value,
 .ui.small.statistic > .value {
-  font-size: 3rem;
+  font-size: $smallValueSize;
 }
 .ui.small.horizontal.statistics .statistic > .value,
 .ui.small.horizontal.statistic > .value {
-  font-size: 2rem;
+  font-size: $smallHorizontalValueSize;
 }
 .ui.small.statistics .statistic > .text.value,
 .ui.small.statistic > .text.value {
-  font-size: 1.5rem;
+  font-size: $smallTextLabelSize;
 }
 
 /* Medium */
 .ui.statistics .statistic > .value,
 .ui.statistic > .value {
-  font-size: 4rem;
+  font-size: $valueSize;
 }
 .ui.horizontal.statistics .statistic > .value,
 .ui.horizontal.statistic > .value {
-  font-size: 3rem;
+  font-size: $horizontalValueSize;
 }
 .ui.statistics .statistic > .text.value,
 .ui.statistic > .text.value {
-  font-size: 2rem;
+  font-size: $textLabelSize;
 }
 
 /* Large */
 .ui.large.statistics .statistic > .value,
 .ui.large.statistic > .value {
-  font-size: 5rem;
+  font-size: $largeValueSize;
 }
 .ui.large.horizontal.statistics .statistic > .value,
 .ui.large.horizontal.statistic > .value {
-  font-size: 4rem;
+  font-size: $largeHorizontalValueSize;
 }
 .ui.large.statistics .statistic > .text.value,
 .ui.large.statistic > .text.value {
-  font-size: 2.5rem;
+  font-size: $largeTextLabelSize;
 }
 
 /* Huge */
 .ui.huge.statistics .statistic > .value,
 .ui.huge.statistic > .value {
-  font-size: 6rem;
+  font-size: $hugeValueSize;
 }
 .ui.huge.horizontal.statistics .statistic > .value,
 .ui.huge.horizontal.statistic > .value {
-  font-size: 5rem;
+  font-size: $hugeHorizontalValueSize;
 }
 .ui.huge.statistics .statistic > .text.value,
 .ui.huge.statistic > .text.value {
-  font-size: 2.5rem;
+  font-size: $hugeTextLabelSize;
 }
 
 
-/*******************************
-         Theme Overrides
-*******************************/
 
 
-
-/*******************************
-    User Variable Overrides
-*******************************/
-
+@include loadUIOverrides();

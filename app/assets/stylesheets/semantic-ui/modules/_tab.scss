@@ -1,15 +1,22 @@
- /*
- * # Semantic UI - 1.8.1
- * https://github.com/Semantic-Org/Semantic-UI
- * http://www.semantic-ui.com/
+/*
+ * # Semantic - Tab
+ * http://github.com/semantic-org/semantic-ui/
  *
- * Copyright 2014 Contributors
+ *
+ * Copyright 2014 Contributor
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
  */
 
+/*******************************
+            Theme
+*******************************/
 
+$type    : 'module';
+$element : 'tab';
+
+// @import '../../theme.config';
 
 /*******************************
            UI Tabs
@@ -19,11 +26,9 @@
   display: none;
 }
 
-
 /*******************************
              States
 *******************************/
-
 
 /*--------------------
        Active
@@ -42,52 +47,48 @@
   position: relative;
   overflow: hidden;
   display: block;
-  min-height: 250px;
+  min-height: $loadingMinHeight;
 }
 .ui.tab.loading * {
-  position: relative !important;
-  left: -10000px !important;
+  position: $loadingContentPosition !important;
+  left: $loadingContentOffset !important;
 }
+
 .ui.tab.loading:before,
 .ui.tab.loading.segment:before {
   position: absolute;
   content: '';
-  top: 100px;
+  top: $loaderDistanceFromTop;
   left: 50%;
-  margin: -1.25em 0em 0em -1.25em;
-  width: 2.5em;
-  height: 2.5em;
-  border-radius: 500rem;
-  border: 0.2em solid rgba(0, 0, 0, 0.1);
+
+  margin: $loaderMargin;
+  width: $loaderSize;
+  height: $loaderSize;
+
+  border-radius: $circularRadius;
+  border: $loaderLineWidth solid $loaderFillColor;
 }
 .ui.tab.loading:after,
 .ui.tab.loading.segment:after {
   position: absolute;
   content: '';
-  top: 100px;
+  top: $loaderDistanceFromTop;
   left: 50%;
-  margin: -1.25em 0em 0em -1.25em;
-  width: 2.5em;
-  height: 2.5em;
-  -webkit-animation: button-spin 0.6s linear;
-          animation: button-spin 0.6s linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  border-radius: 500rem;
-  border-color: #aaaaaa transparent transparent;
+
+  margin: $loaderMargin;
+  width: $loaderSize;
+  height: $loaderSize;
+
+  animation: button-spin $loaderSpeed linear;
+  animation-iteration-count: infinite;
+
+  border-radius: $circularRadius;
+
+  border-color: $loaderLineColor transparent transparent;
   border-style: solid;
-  border-width: 0.2em;
+  border-width: $loaderLineWidth;
+
   box-shadow: 0px 0px 0px 1px transparent;
 }
 
-
-/*******************************
-         Tab Overrides
-*******************************/
-
-
-
-/*******************************
-        User Overrides
-*******************************/
-
+@include loadUIOverrides();

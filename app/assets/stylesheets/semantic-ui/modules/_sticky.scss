@@ -1,15 +1,22 @@
  /*
- * # Semantic UI - 1.8.1
- * https://github.com/Semantic-Org/Semantic-UI
- * http://www.semantic-ui.com/
+ * # Semantic - Sticky
+ * http://github.com/semantic-org/semantic-ui/
  *
- * Copyright 2014 Contributors
+ *
+ * Copyright 2014 Contributor
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
  */
 
+/*******************************
+            Theme
+*******************************/
 
+$type    : 'module';
+$element : 'sticky';
+
+// @import '../../theme.config';
 
 /*******************************
             Sticky
@@ -17,16 +24,13 @@
 
 .ui.sticky {
   position: static;
-  -webkit-transition: width 0.2s ease, height 0.2s ease, top 0.2s ease, bottom 0.2s ease;
-          transition: width 0.2s ease, height 0.2s ease, top 0.2s ease, bottom 0.2s ease;
-  z-index: 800;
+  transition: $transition;
+  z-index: $zIndex;
 }
-
 
 /*******************************
             States
 *******************************/
-
 
 /* Bound */
 .ui.sticky.bound {
@@ -67,14 +71,4 @@
   position: sticky;
 }
 
-
-/*******************************
-         Theme Overrides
-*******************************/
-
-
-
-/*******************************
-         Site Overrides
-*******************************/
-
+@include loadUIOverrides();

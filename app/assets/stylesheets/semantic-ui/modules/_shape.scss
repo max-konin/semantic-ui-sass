@@ -1,14 +1,23 @@
- /*
- * # Semantic UI - 1.8.1
- * https://github.com/Semantic-Org/Semantic-UI
- * http://www.semantic-ui.com/
+/*
+ * # Semantic - Shape
+ * http://github.com/semantic-org/semantic-ui/
  *
- * Copyright 2014 Contributors
+ *
+ * Copyright 2014 Contributor
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
  */
 
+
+/*******************************
+            Theme
+*******************************/
+
+$type    : 'module';
+$element : 'shape';
+
+// @import '../../theme.config';
 
 
 /*******************************
@@ -17,58 +26,58 @@
 
 .ui.shape {
   position: relative;
-  display: inline-block;
-  -webkit-perspective: 2000px;
-          perspective: 2000px;
+  display: $display;
+  perspective: $perspective;
 }
+
 .ui.shape .sides {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
+
 .ui.shape .side {
   opacity: 1;
   width: 100%;
-  margin: 0em !important;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+
+  margin: $sideMargin !important;
+
+  backface-visibility: $backfaceVisibility;
 }
+
 .ui.shape .side {
   display: none;
 }
-.ui.shape .side > * {
-  -webkit-backface-visibility: visible !important;
-          backface-visibility: visible !important;
-}
 
+.ui.shape .side > * {
+  backface-visibility: visible !important;
+}
 
 /*******************************
              Types
 *******************************/
 
 .ui.cube.shape .side {
-  min-width: 15em;
-  height: 15em;
-  padding: 2em;
-  background-color: #e6e6e6;
-  color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
+  min-width: $cubeSize;
+  height: $cubeSize;
+
+  padding: $cubePadding;
+
+  background-color: $cubeBackground;
+  color: $cubeTextColor;
+  box-shadow: $cubeBoxShadow;
 }
 .ui.cube.shape .side > .content {
   width: 100%;
   height: 100%;
   display: table;
-  text-align: center;
-  -webkit-user-select: text;
-     -moz-user-select: text;
-      -ms-user-select: text;
-          user-select: text;
+
+  text-align: $cubeTextAlign;
+  user-select: text;
 }
 .ui.cube.shape .side > .content > div {
   display: table-cell;
   vertical-align: middle;
-  font-size: 2em;
+  font-size: $cubeFontSize;
 }
-
 
 /*******************************
           Variations
@@ -89,7 +98,6 @@
              States
 *******************************/
 
-
 /*--------------
     Loading
 ---------------*/
@@ -100,6 +108,7 @@
   left: -9999px;
 }
 
+
 /*--------------
     Animating
 ---------------*/
@@ -108,30 +117,28 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  z-index: 100;
+  z-index: $animatingZIndex;
 }
 .ui.shape .hidden.side {
-  opacity: 0.4;
+  opacity: $hiddenSideOpacity;
 }
+
 
 /*--------------
       CSS
 ---------------*/
 
 .ui.shape.animating {
-  -webkit-transition: all 0.6s ease-in-out;
-          transition: all 0.6s ease-in-out;
+  transition: $transition;
 }
 .ui.shape.animating .sides {
   position: absolute;
 }
 .ui.shape.animating .sides {
-  -webkit-transition: all 0.6s ease-in-out;
-          transition: all 0.6s ease-in-out;
+  transition: $transition;
 }
 .ui.shape.animating .side {
-  -webkit-transition: opacity 0.6s ease-in-out;
-          transition: opacity 0.6s ease-in-out;
+  transition: $sideTransition;
 }
 
 /*--------------
@@ -142,14 +149,4 @@
   display: block;
 }
 
-
-/*******************************
-         Theme Overrides
-*******************************/
-
-
-
-/*******************************
-        User Overrides
-*******************************/
-
+@include loadUIOverrides();

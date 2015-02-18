@@ -1,7 +1,7 @@
  /*
- * # Semantic UI - 1.8.1
- * https://github.com/Semantic-Org/Semantic-UI
- * http://www.semantic-ui.com/
+ * # Semantic - Item
+ * http://github.com/semantic-org/semantic-ui/
+ *
  *
  * Copyright 2014 Contributors
  * Released under the MIT license
@@ -9,12 +9,18 @@
  *
  */
 
+/*******************************
+            Theme
+*******************************/
 
+$type    : 'view';
+$element : 'item';
+
+// @import '../../theme.config';
 
 /*******************************
             Standard
 *******************************/
-
 
 /*--------------
       Item
@@ -22,18 +28,19 @@
 
 .ui.items > .item {
   table-layout: fixed;
-  display: table;
-  margin: 1em 0em;
-  width: 100%;
-  min-height: 0px;
-  background: transparent;
-  padding: 0em;
-  border: none;
-  border-radius: 0rem;
-  box-shadow: none;
-  -webkit-transition: box-shadow 0.2s ease;
-          transition: box-shadow 0.2s ease;
-  z-index: '';
+
+  display: $display;
+  margin: $itemSpacing 0em;
+  width: $width;
+  min-height: $minHeight;
+  background: $background;
+  padding: $padding;
+
+  border: $border;
+  border-radius: $borderRadius;
+  box-shadow: $boxShadow;
+  transition: $transition;
+  z-index: $zIndex;
 }
 .ui.items > .item a {
   cursor: pointer;
@@ -44,8 +51,9 @@
 ---------------*/
 
 .ui.items {
-  margin: 1.5em 0em;
+  margin: $groupMargin;
 }
+
 .ui.items:first-child {
   margin-top: 0em !important;
 }
@@ -75,29 +83,33 @@
   margin-bottom: 0em;
 }
 
+
+
 /*--------------
      Images
 ---------------*/
 
 .ui.items > .item > .image {
   position: relative;
-  display: table-cell;
-  float: none;
-  margin: 0em;
-  padding: 0em;
-  max-height: '';
-  vertical-align: top;
+  display: $imageDisplay;
+  float: $imageFloat;
+  margin: $imageMargin;
+  padding: $imagePadding;
+  max-height: $imageMaxHeight;
+  vertical-align: $imageVerticalAlign;
 }
 .ui.items > .item > .image > img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 0.125rem;
-  border: none;
+  border-radius: $imageBorderRadius;
+  border: $imageBorder;
 }
+
 .ui.items > .item > .image:only-child > img {
-  border-radius: 0rem;
+  border-radius: $borderRadius;
 }
+
 
 /*--------------
      Content
@@ -105,13 +117,13 @@
 
 .ui.items > .item > .content {
   display: block;
-  background: none;
-  margin: 0em;
-  padding: 0em;
-  box-shadow: none;
-  font-size: 1em;
-  border: none;
-  border-radius: 0em;
+  background: $contentBackground;
+  margin: $contentMargin;
+  padding: $contentPadding;
+  box-shadow: $contentBoxShadow;
+  font-size: $contentFontSize;
+  border: $contentBorder;
+  border-radius: $contentBorderRadius;
 }
 .ui.items > .item > .content:after {
   display: block;
@@ -121,24 +133,25 @@
   overflow: hidden;
   visibility: hidden;
 }
+
 .ui.items > .item > .image + .content {
-  width: 100%;
-  display: table-cell;
-  margin-left: 0em;
-  vertical-align: top;
-  padding-left: 1.5em;
-}
-.ui.items > .item > .content > .header {
-  display: inline-block;
-  margin: -0.165em 0em 0em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.85);
+  width: $contentWidth;
+  display: $contentDisplay;
+  margin-left: $contentOffset;
+  vertical-align: $contentVerticalAlign;
+  padding-left: $contentImageDistance;
 }
 
+.ui.items > .item > .content > .header {
+  display: inline-block;
+  margin: $headerMargin;
+  font-family: $headerFont;
+  font-weight: $headerFontWeight;
+  color: $headerColor;
+}
 /* Default Header Size */
 .ui.items > .item > .content > .header:not(.ui) {
-  font-size: 1.2em;
+  font-size: $headerFontSize;
 }
 
 /*--------------
@@ -152,32 +165,34 @@
   float: right;
 }
 
+
 /*--------------
   Content Image
 ---------------*/
 
 .ui.items > .item .content img {
   display: inline-block;
-  vertical-align: middle;
-  width: 2em;
+  vertical-align: $contentImageVerticalAlign;
+  width: $contentImageWidth;
 }
 .ui.items > .item img.avatar,
 .ui.items > .item .avatar img {
-  width: 2em;
-  height: 2em;
-  border-radius: 500rem;
+  width: $avatarSize;
+  height: $avatarSize;
+  border-radius: $avatarBorderRadius;
 }
+
 
 /*--------------
    Description
 ---------------*/
 
 .ui.items > .item > .content > .description {
-  margin-top: 0.6em;
-  max-width: 550px;
-  font-size: 1em;
-  line-height: 1.33;
-  color: rgba(0, 0, 0, 0.8);
+  margin-top: $descriptionDistance;
+  max-width: $descriptionMaxWidth;
+  font-size: $descriptionFontSize;
+  line-height: $descriptionLineHeight;
+  color: $descriptionColor;
 }
 
 /*--------------
@@ -185,7 +200,7 @@
 ---------------*/
 
 .ui.items > .item > .content p {
-  margin: 0em 0em 0.5em;
+  margin: 0em 0em $paragraphDistance;
 }
 .ui.items > .item > .content p:last-child {
   margin-bottom: 0em;
@@ -196,91 +211,87 @@
 ---------------*/
 
 .ui.items > .item .meta {
-  font-size: 1em;
-  line-height: 1em;
-  color: rgba(0, 0, 0, 0.6);
+  font-size: $metaFontSize;
+  line-height: $metaLineHeight;
+  color: $metaColor;
 }
 .ui.items > .item .meta * {
-  margin-right: 0.3em;
+  margin-right: $metaSpacing;
 }
 .ui.items > .item .meta :last-child {
   margin-right: 0em;
 }
+
 .ui.items > .item .meta [class*="right floated"] {
   margin-right: 0em;
-  margin-left: 0.3em;
+  margin-left: $metaSpacing;
 }
 
 /*--------------
       Links
 ---------------*/
 
-
 /* Generic */
 .ui.items > .item > .content a:not(.ui) {
-  color: '';
-  -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  color: $contentLinkColor;
+  transition: $contentLinkTransition;
 }
 .ui.items > .item > .content a:not(.ui):hover {
-  color: '';
+  color: $contentLinkHoverColor;
 }
 
 /* Header */
 .ui.items > .item > .content > a.header {
-  color: rgba(0, 0, 0, 0.85);
+  color: $headerLinkColor;
 }
 .ui.items > .item > .content > a.header:hover {
-  color: #00b2f3;
+  color: $headerLinkHoverColor;
 }
 
 /* Meta */
 .ui.items > .item .meta > a:not(.ui) {
-  color: rgba(0, 0, 0, 0.4);
+  color: $metaLinkColor;
 }
 .ui.items > .item .meta > a:not(.ui):hover {
-  color: rgba(0, 0, 0, 0.8);
+  color: $metaLinkHoverColor;
 }
+
+
 
 /*--------------
      Labels
 ---------------*/
 
-
 /*-----Star----- */
-
 
 /* Icon */
 .ui.items > .item > .content .favorite.icon {
   cursor: pointer;
-  opacity: 0.75;
-  -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  opacity: $actionOpacity;
+  transition: $actionTransition;
 }
 .ui.items > .item > .content .favorite.icon:hover {
-  opacity: 1;
-  color: #ffb70a;
+  opacity: $actionHoverOpacity;
+  color: $favoriteColor;
 }
 .ui.items > .item > .content .active.favorite.icon {
-  color: #ffb70a;
+  color: $favoriteActiveColor;
 }
 
 /*-----Like----- */
 
-
 /* Icon */
 .ui.items > .item > .content .like.icon {
   cursor: pointer;
-  opacity: 0.75;
-  -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  opacity: $actionOpacity;
+  transition: $actionTransition;
 }
 .ui.items > .item > .content .like.icon:hover {
-  opacity: 1;
-  color: #ff2733;
+  opacity: $actionHoverOpacity;
+  color: $likeColor;
 }
 .ui.items > .item > .content .active.like.icon {
-  color: #ff2733;
+  color: $likeActiveColor;
 }
 
 /*----------------
@@ -288,26 +299,26 @@
 -----------------*/
 
 .ui.items > .item .extra {
-  display: block;
-  position: relative;
-  background: none;
-  margin: 0.5rem 0em 0em;
-  width: 100%;
-  padding: 0em 0em 0em;
-  top: 0em;
-  left: 0em;
-  color: rgba(0, 0, 0, 0.4);
-  box-shadow: none;
-  -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
-  border-top: none;
+  display: $extraDisplay;
+  position: $extraPosition;
+  background: $extraBackground;
+  margin: $extraMargin;
+  width: $extraWidth;
+  padding: $extraPadding;
+  top: $extraTop;
+  left: $extraLeft;
+  color: $extraColor;
+  box-shadow: $extraBoxShadow;
+  transition: $extraTransition;
+  border-top: $extraDivider;
 }
 .ui.items > .item .extra > * {
-  margin: 0.25rem 0.5rem 0.25rem 0em;
+  margin: ($extraRowSpacing / 2) $extraHorizontalSpacing ($extraRowSpacing / 2) 0em;
 }
 .ui.items > .item .extra > [class*="right floated"] {
-  margin: 0.25rem 0em 0.25rem 0.5rem;
+  margin: ($extraRowSpacing / 2) 0em ($extraRowSpacing / 2) $extraHorizontalSpacing;
 }
+
 .ui.items > .item .extra:after {
   display: block;
   content: ' ';
@@ -322,30 +333,31 @@
           Responsive
 *******************************/
 
-
 /* Default Image Width */
 .ui.items > .item > .image:not(.ui) {
-  width: 175px;
+  width: $imageWidth;
 }
 
+
 /* Tablet Only */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: $tabletBreakpoint) and (max-width: $largestTabletScreen) {
   .ui.items > .item {
-    margin: 1em 0em;
+    margin: $tabletItemSpacing 0em;
   }
   .ui.items > .item > .image:not(.ui) {
-    width: 150px;
+    width: $tabletImageWidth;
   }
   .ui.items > .item > .image + .content {
     display: block;
-    padding: 0em 0em 0em 1em;
+    padding: 0em 0em 0em $tabletContentImageDistance;
   }
+
 }
 
 /* Mobily Only */
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: $largestMobileScreen) {
   .ui.items > .item {
-    margin: 2em 0em;
+    margin: $mobileItemSpacing 0em;
   }
   .ui.items > .item > .image {
     display: block;
@@ -355,13 +367,14 @@
   .ui.items > .item > .image,
   .ui.items > .item > .image > img {
     max-width: 100% !important;
-    width: auto !important;
-    max-height: 250px !important;
+    width: $mobileImageWidth !important;
+    max-height: $mobileImageMaxHeight !important;
   }
   .ui.items > .item > .image + .content {
     display: block;
-    padding: 1.5em 0em 0em;
+    padding: $mobileContentImageDistance 0em 0em;
   }
+
 }
 
 
@@ -384,45 +397,48 @@
   vertical-align: bottom;
 }
 
+
 /*--------------
      Relaxed
 ---------------*/
 
 .ui.relaxed.items > .item {
-  margin: 1.5em 0em;
+  margin: $relaxedItemSpacing 0em;
 }
 .ui[class*="very relaxed"].items > .item {
-  margin: 2em 0em;
+  margin: $veryRelaxedItemSpacing 0em;
 }
+
 
 /*-------------------
       Divided
 --------------------*/
 
 .ui.divided.items > .item {
-  border-top: 1px solid rgba(39, 41, 43, 0.15);
-  margin: 0em;
-  padding: 1em 0em;
+  border-top: $dividedBorder;
+  margin: $dividedMargin;
+  padding: $dividedPadding;
 }
 .ui.divided.items > .item:first-child {
   border-top: none;
-  margin-top: 0em !important;
-  padding-top: 0em !important;
+  margin-top: $dividedFirstLastMargin !important;
+  padding-top: $dividedFirstLastPadding !important;
 }
 .ui.divided.items > .item:last-child {
-  margin-bottom: 0em !important;
-  padding-bottom: 0em !important;
+  margin-bottom: $dividedFirstLastMargin !important;
+  padding-bottom: $dividedFirstLastPadding !important;
 }
 
 /* Relaxed Divided */
 .ui.relaxed.divided.items > .item {
   margin: 0em;
-  padding: 1.5em 0em;
+  padding: $relaxedItemSpacing 0em;
 }
 .ui[class*="very relaxed"].divided.items > .item {
   margin: 0em;
-  padding: 2em 0em;
+  padding: $veryRelaxedItemSpacing 0em;
 }
+
 
 /*-------------------
         Link
@@ -432,27 +448,19 @@
 .ui.link.items > .item:hover {
   cursor: pointer;
 }
+
 .ui.items a.item:hover .content .header,
 .ui.link.items > .item:hover .content .header {
-  color: #00b2f3;
+  color: $headerLinkHoverColor;
 }
+
 
 /*--------------
       Size
 ---------------*/
 
 .ui.items > .item {
-  font-size: 1em;
+  font-size: $medium;
 }
 
-
-/*******************************
-         Theme Overrides
-*******************************/
-
-
-
-/*******************************
-    User Variable Overrides
-*******************************/
-
+@include loadUIOverrides();

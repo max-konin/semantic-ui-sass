@@ -1,14 +1,22 @@
- /*
- * # Semantic UI - 1.8.1
- * https://github.com/Semantic-Org/Semantic-UI
- * http://www.semantic-ui.com/
+/*
+ * # Semantic - Nag
+ * http://github.com/semantic-org/semantic-ui/
  *
- * Copyright 2014 Contributors
+ *
+ * Copyright 2014 Contributor
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
  */
 
+/*******************************
+            Theme
+*******************************/
+
+$type    : 'module';
+$element : 'nag';
+
+// @import '../../theme.config';
 
 
 /*******************************
@@ -17,58 +25,70 @@
 
 .ui.nag {
   display: none;
-  opacity: 0.95;
-  position: relative;
-  top: 0em;
+  opacity: $opacity;
+  position: $position;
+
+  top: $top;
   left: 0px;
-  z-index: 999;
-  min-height: 0em;
-  width: 100%;
-  margin: 0em;
-  padding: 0.75em 1em;
-  background: #555555;
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
-  font-size: 1rem;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.8);
-  border-radius: 0em 0em 0.2857rem 0.2857rem;
-  -webkit-transition: 0.2s background ease;
-          transition: 0.2s background ease;
+  z-index: $zIndex;
+
+  min-height: $minHeight;
+  width: $width;
+
+  margin: $margin;
+  padding: $padding;
+
+  background: $background;
+  box-shadow: $boxShadow;
+
+  font-size: $fontSize;
+  text-align: $textAlign;
+  color: $color;
+
+  border-radius: $topBorderRadius;
+  transition: $transition;
 }
+
 a.ui.nag {
   cursor: pointer;
 }
+
 .ui.nag > .title {
   display: inline-block;
-  margin: 0em 0.5em;
-  color: $white;
+  margin: $titleMargin;
+  color: $titleColor;
 }
+
+
 .ui.nag > .close.icon {
   cursor: pointer;
-  opacity: 0.4;
+  opacity: $closeOpacity;
+
   position: absolute;
-  top: 50%;
-  right: 1em;
-  font-size: 1em;
-  margin: -0.5em 0em 0em;
-  color: $white;
-  -webkit-transition: opacity 0.2s ease;
-          transition: opacity 0.2s ease;
+  top: $closeTop;
+  right: $closeRight;
+
+  font-size: $closeSize;
+
+  margin: $closeMargin;
+  color: $closeColor;
+  transition: $closeTransition;
 }
+
 
 
 /*******************************
              States
 *******************************/
 
-
 /* Hover */
 .ui.nag:hover {
-  background: #555555;
-  opacity: 1;
+  background: $nagHoverBackground;
+  opacity: $nagHoverOpacity;
 }
+
 .ui.nag .close:hover {
-  opacity: 1;
+  opacity: $closeHoverOpacity;
 }
 
 
@@ -100,9 +120,9 @@ a.ui.nag {
 
 .ui.bottom.nags,
 .ui.bottom.nag {
-  border-radius: 0.2857rem 0.2857rem 0em 0em;
+  border-radius: $bottomBorderRadius;
   top: auto;
-  bottom: 0em;
+  bottom: $bottom;
 }
 
 /*--------------
@@ -111,14 +131,14 @@ a.ui.nag {
 
 .ui.inverted.nags .nag,
 .ui.inverted.nag {
-  background-color: #f0f0f0;
-  color: rgba(0, 0, 0, 0.85);
+  background-color: $invertedBackground;
+  color: $darkTextColor;
 }
 .ui.inverted.nags .nag .close,
 .ui.inverted.nags .nag .title,
 .ui.inverted.nag .close,
 .ui.inverted.nag .title {
-  color: rgba(0, 0, 0, 0.4);
+  color: $lightTextColor;
 }
 
 
@@ -127,23 +147,13 @@ a.ui.nag {
 *******************************/
 
 .ui.nags .nag {
-  border-radius: 0em !important;
+  border-radius: $groupedBorderRadius !important;
 }
 .ui.nags .nag:last-child {
-  border-radius: 0em 0em 0.2857rem 0.2857rem;
+  border-radius: $topBorderRadius;
 }
 .ui.bottom.nags .nag:last-child {
-  border-radius: 0.2857rem 0.2857rem 0em 0em;
+  border-radius: $bottomBorderRadius;
 }
 
-
-/*******************************
-         Theme Overrides
-*******************************/
-
-
-
-/*******************************
-        User Overrides
-*******************************/
-
+@include loadUIOverrides();

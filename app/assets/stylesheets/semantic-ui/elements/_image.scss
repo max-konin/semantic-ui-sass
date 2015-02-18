@@ -1,15 +1,22 @@
- /*
- * # Semantic UI - 1.8.1
- * https://github.com/Semantic-Org/Semantic-UI
- * http://www.semantic-ui.com/
+/*
+ * # Semantic - Image
+ * http://github.com/semantic-org/semantic-ui/
  *
- * Copyright 2014 Contributors
+ *
+ * Copyright 2014 Contributor
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
  */
 
+/*******************************
+            Theme
+*******************************/
 
+$type    : 'element';
+$element : 'image';
+
+// @import '../../theme.config';
 
 /*******************************
              Image
@@ -20,11 +27,13 @@
   display: inline-block;
   vertical-align: middle;
   max-width: 100%;
-  background-color: transparent;
+  background-color: $placeholderColor;
 }
+
 img.ui.image {
   display: block;
 }
+
 .ui.image svg,
 .ui.image img {
   display: block;
@@ -37,9 +46,10 @@ img.ui.image {
             States
 *******************************/
 
+
 .ui.disabled.image {
   cursor: default;
-  opacity: 0.3;
+  opacity: $disabledOpacity;
 }
 
 
@@ -94,7 +104,7 @@ img.ui.image {
 .ui.rounded.image img,
 .ui.rounded.image svg,
 .ui.rounded.image {
-  border-radius: 0.3125em;
+  border-radius: $roundedBorderRadius;
 }
 
 /*--------------
@@ -107,7 +117,7 @@ img.ui.image {
 .ui.bordered.image img,
 .ui.bordered.image svg,
 img.ui.bordered.image {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: $imageBorder;
 }
 
 /*--------------
@@ -118,13 +128,16 @@ img.ui.bordered.image {
 .ui.circular.image {
   overflow: hidden;
 }
+
 .ui.circular.images .image,
 .ui.circular.images img,
 .ui.circular.images svg,
 .ui.circular.image img,
 .ui.circular.image svg,
 .ui.circular.image {
-  border-radius: 500rem;
+  -webkit-border-radius: $circularRadius;
+  -moz-border-radius: $circularRadius;
+  border-radius: $circularRadius;
 }
 
 /*--------------
@@ -141,6 +154,7 @@ img.ui.bordered.image {
   width: 100%;
 }
 
+
 /*--------------
      Avatar
 ---------------*/
@@ -151,12 +165,17 @@ img.ui.bordered.image {
 .ui.avatar.image img,
 .ui.avatar.image svg,
 .ui.avatar.image {
-  margin-right: 0.25em;
+  margin-right: $avatarMargin;
+
   display: inline-block;
-  width: 2.5em;
-  height: 2.5em;
-  border-radius: 500rem;
+  width: $avatarSize;
+  height: $avatarSize;
+
+  -webkit-border-radius: $circularRadius;
+  -moz-border-radius: $circularRadius;
+  border-radius: $circularRadius;
 }
+
 
 /*-------------------
        Floated
@@ -165,20 +184,23 @@ img.ui.bordered.image {
 .ui.floated.image,
 .ui.floated.images {
   float: left;
-  margin-right: 1em;
-  margin-bottom: 1em;
+  margin-right: $floatedHorizontalMargin;
+  margin-bottom: $floatedVerticalMargin;
 }
 .ui.right.floated.images,
 .ui.right.floated.image {
   float: right;
   margin-right: 0em;
-  margin-bottom: 1em;
-  margin-left: 1em;
+  margin-bottom: $floatedVerticalMargin;
+  margin-left: $floatedHorizontalMargin;
 }
+
 .ui.floated.images:last-child,
 .ui.floated.image:last-child {
   margin-bottom: 0em;
 }
+
+
 .ui.centered.images,
 .ui.centered.image {
   margin-left: auto;
@@ -193,59 +215,58 @@ img.ui.bordered.image {
 .ui.mini.images img,
 .ui.mini.images svg,
 .ui.mini.image {
-  width: 20px;
-  font-size: 0.71428571rem;
+  width: $miniWidth;
+  font-size: $mini;
 }
 .ui.tiny.images .image,
 .ui.tiny.images img,
 .ui.tiny.images svg,
 .ui.tiny.image {
-  width: 80px;
-  font-size: 0.85714286rem;
+  width: $tinyWidth;
+  font-size: $tiny;
 }
 .ui.small.images .image,
 .ui.small.images img,
 .ui.small.images svg,
 .ui.small.image {
-  width: 150px;
-  font-size: 0.92857143rem;
+  width: $smallWidth;
+  font-size: $small;
 }
 .ui.medium.images .image,
 .ui.medium.images img,
 .ui.medium.images svg,
 .ui.medium.image {
-  width: 300px;
-  font-size: 1rem;
+  width: $mediumWidth;
+  font-size: $medium;
 }
 .ui.large.images .image,
 .ui.large.images img,
 .ui.large.images svg,
 .ui.large.image {
-  width: 450px;
-  font-size: 1.14285714rem;
+  width: $largeWidth;
+  font-size: $large;
 }
 .ui.big.images .image,
 .ui.big.images img,
 .ui.big.images svg,
 .ui.big.image {
-  width: 600px;
-  font-size: 1.28571429rem;
+  width: $bigWidth;
+  font-size: $big;
 }
 .ui.huge.images .image,
 .ui.huge.images img,
 .ui.huge.images svg,
 .ui.huge.image {
-  width: 800px;
-  font-size: 1.42857143rem;
+  width: $hugeWidth;
+  font-size: $huge;
 }
 .ui.massive.images .image,
 .ui.massive.images img,
 .ui.massive.images svg,
 .ui.massive.image {
-  width: 960px;
-  font-size: 1.71428571rem;
+  width: $massiveWidth;
+  font-size: $massive;
 }
-
 
 /*******************************
               Groups
@@ -253,23 +274,14 @@ img.ui.bordered.image {
 
 .ui.images {
   font-size: 0em;
-  margin: 0em -0.25rem 0rem;
+  margin: 0em -$imageHorizontalMargin 0rem;
 }
+
 .ui.images .image,
 .ui.images img,
 .ui.images svg {
   display: inline-block;
-  margin: 0em 0.25rem 0.5rem;
+  margin: 0em $imageHorizontalMargin $imageVerticalMargin;
 }
 
-
-/*******************************
-         Theme Overrides
-*******************************/
-
-
-
-/*******************************
-         Site Overrides
-*******************************/
-
+@include loadUIOverrides();

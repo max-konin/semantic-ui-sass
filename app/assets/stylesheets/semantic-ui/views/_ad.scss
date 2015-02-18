@@ -1,15 +1,22 @@
  /*
- * # Semantic UI - 1.8.1
- * https://github.com/Semantic-Org/Semantic-UI
- * http://www.semantic-ui.com/
+ * # Semantic - Ad
+ * http://github.com/semantic-org/semantic-ui/
  *
- * Copyright 2014 Contributors
+ *
+ * Copyright 2013 Contributors
  * Released under the MIT license
  * http://opensource.org/licenses/MIT
  *
  */
 
+/*******************************
+            Theme
+*******************************/
 
+$type    : 'view';
+$element : 'ad';
+
+// @import '../../theme.config';
 
 /*******************************
          Advertisement
@@ -17,15 +24,18 @@
 
 .ui.ad {
   display: block;
-  overflow: hidden;
-  margin: 1em 0em;
+  overflow: $overflow;
+  margin: $margin;
 }
+
 .ui.ad:first-child {
   margin: 0em;
 }
+
 .ui.ad:last-child {
   margin: 0em;
 }
+
 .ui.ad iframe {
   margin: 0em;
   padding: 0em;
@@ -36,7 +46,6 @@
 /*--------------
      Common
 ---------------*/
-
 
 /* Leaderboard */
 .ui.leaderboard.ad {
@@ -55,7 +64,6 @@
   width: 336px;
   height: 280px;
 }
-
 /* Half Page */
 .ui[class*="half page"].ad {
   width: 300px;
@@ -65,7 +73,6 @@
 /*--------------
      Square
 ---------------*/
-
 
 /* Square */
 .ui.square.ad {
@@ -82,7 +89,6 @@
 /*--------------
     Rectangle
 ---------------*/
-
 
 /* Small Rectangle */
 .ui[class*="small rectangle"].ad {
@@ -117,7 +123,6 @@
    Skyscrapers
 ---------------*/
 
-
 /* Skyscraper */
 .ui.skyscraper.ad {
   width: 120px;
@@ -132,7 +137,6 @@
 /*--------------
      Banners
 ---------------*/
-
 
 /* Banner */
 .ui.banner.ad {
@@ -162,7 +166,6 @@
     Boards
 ---------------*/
 
-
 /* Leaderboard */
 .ui[class*="large leaderboard"].ad {
   width: 970px;
@@ -179,7 +182,6 @@
     Panorama
 ---------------*/
 
-
 /* Panorama */
 .ui.panorama.ad {
   width: 980px;
@@ -190,17 +192,17 @@
      Netboard
 ---------------*/
 
-
 /* Netboard */
 .ui.netboard.ad {
   width: 580px;
   height: 400px;
 }
 
+
+
 /*--------------
      Mobile
 ---------------*/
-
 
 /* Large Mobile Banner */
 .ui[class*="large mobile banner"].ad {
@@ -214,17 +216,16 @@
   height: 50px;
 }
 
-
 /*******************************
              Types
 *******************************/
-
 
 /* Mobile Sizes */
 .ui.mobile.ad {
   display: none;
 }
-@media only screen and (max-width: 767px) {
+
+@media only screen and (max-width : ($tabletBreakpoint - 1)) {
   .ui.mobile.ad {
     display: block;
   }
@@ -239,9 +240,10 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .ui.test.ad {
   position: relative;
-  background: #333333;
+  background: $testBackground;
 }
 .ui.test.ad:after {
   position: absolute;
@@ -249,29 +251,18 @@
   left: 50%;
   width: 100%;
   text-align: center;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-      -ms-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
-  content: 'Ad';
-  color: $white;
-  font-size: 1em;
-  font-weight: bold;
+  transform: translateX(-50%) translateY(-50%);
+
+  content: $testText;
+  color: $testColor;
+  font-size: $testFontSize;
+  font-weight: $testFontWeight;
 }
 .ui.mobile.test.ad:after {
-  font-size: 0.85714em;
+  font-size: $testMobileFontSize;
 }
 .ui.test.ad[data-text]:after {
   content: attr(data-text);
 }
 
-
-/*******************************
-         Theme Overrides
-*******************************/
-
-
-
-/*******************************
-    User Variable Overrides
-*******************************/
-
+@include loadUIOverrides();

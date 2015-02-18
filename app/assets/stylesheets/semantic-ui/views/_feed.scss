@@ -1,7 +1,7 @@
  /*
- * # Semantic UI - 1.8.1
- * https://github.com/Semantic-Org/Semantic-UI
- * http://www.semantic-ui.com/
+ * # Semantic - Feed
+ * http://github.com/semantic-org/semantic-ui/
+ *
  *
  * Copyright 2014 Contributors
  * Released under the MIT license
@@ -9,14 +9,21 @@
  *
  */
 
+/*******************************
+            Theme
+*******************************/
 
+$type    : 'view';
+$element : 'feed';
+
+// @import '../../theme.config';
 
 /*******************************
          Activity Feed
 *******************************/
 
 .ui.feed {
-  margin: 1em 0em;
+  margin: $margin;
 }
 .ui.feed:first-child {
   margin-top: 0em;
@@ -30,15 +37,14 @@
             Content
 *******************************/
 
-
 /* Event */
 .ui.feed > .event {
-  display: table;
-  width: 100%;
-  padding: 0.5rem 0em;
-  margin: 0em;
-  background: none;
-  border-top: none;
+  display: $eventDisplay;
+  width: $eventWidth;
+  padding: $eventPadding;
+  margin: $eventMargin;
+  background: $eventBackground;
+  border-top: $eventDivider;
 }
 .ui.feed > .event:first-child {
   border-top: 0px;
@@ -50,40 +56,40 @@
 
 /* Event Label */
 .ui.feed > .event > .label {
-  display: table-cell;
-  width: 2.5em;
-  height: 2.5em;
-  vertical-align: top;
-  text-align: left;
+  display: $labelDisplay;
+  width: $labelWidth;
+  height: $labelHeight;
+  vertical-align: $labelVerticalAlign;
+  text-align: $labelTextAlign;
 }
 .ui.feed > .event > .label .icon {
-  opacity: 1;
-  font-size: 1.5em;
-  width: 100%;
-  padding: 0.25em;
-  background: none;
-  border: none;
-  border-radius: none;
-  color: rgba(0, 0, 0, 0.6);
+  opacity: $iconLabelOpacity;
+  font-size: $iconLabelSize;
+  width: $iconLabelWidth;
+  padding: $iconLabelPadding;
+  background: $iconLabelBackground;
+  border: $iconLabelBorder;
+  border-radius: $iconLabelBorderRadius;
+  color: $iconLabelColor;
 }
 .ui.feed > .event > .label img {
-  width: 100%;
-  height: auto;
-  border-radius: 500rem;
+  width: $imageLabelWidth;
+  height: $imageLabelHeight;
+  border-radius: $imageLabelBorderRadius;
 }
 .ui.feed > .event > .label + .content {
-  padding: 0.5em 0em 0.5em 1.25em;
+  padding: $labeledContentPadding;
 }
 
 /* Content */
 .ui.feed > .event > .content {
-  display: table-cell;
-  vertical-align: top;
-  text-align: left;
-  word-wrap: break-word;
+  display: $contentDisplay;
+  vertical-align: $contentVerticalAlign;
+  text-align: $contentTextAlign;
+  word-wrap: $contentWordWrap;
 }
 .ui.feed > .event:last-child > .content {
-  padding-bottom: 0em;
+  padding-bottom: $lastLabeledContentPadding;
 }
 
 /* Link */
@@ -96,12 +102,13 @@
 ---------------*/
 
 .ui.feed > .event > .content .date {
-  margin: -0.5rem 0em 0em;
-  padding: 0em;
-  font-weight: normal;
-  font-size: 1em;
-  font-style: normal;
-  color: rgba(0, 0, 0, 0.4);
+  margin: $dateMargin;
+  padding: $datePadding;
+  color: $dateColor;
+  font-weight: $dateFontWeight;
+  font-size: $dateFontSize;
+  font-style: $dateFontStyle;
+  color: $dateColor;
 }
 
 /*--------------
@@ -109,54 +116,51 @@
 ---------------*/
 
 .ui.feed > .event > .content .summary {
-  margin: 0em;
-  font-size: 1em;
-  font-weight: bold;
-  color: rgba(0, 0, 0, 0.8);
+  margin: $summaryMargin;
+  font-size: $summaryFontSize;
+  font-weight: $summaryFontWeight;
+  color: $summaryColor;
 }
 
 /* Summary Image */
 .ui.feed > .event > .content .summary img {
   display: inline-block;
-  width: auto;
-  height: 2em;
-  margin: -0.25em 0.25em 0em 0em;
-  border-radius: 0.25em;
-  vertical-align: middle;
+  width: $summaryImageWidth;
+  height: $summaryImageHeight;
+  margin: $summaryImageMargin;
+  border-radius: $summaryImageBorderRadius;
+  vertical-align: $summaryImageVerticalAlign;
 }
-
 /*--------------
       User
 ---------------*/
 
 .ui.feed > .event > .content .user {
   display: inline-block;
-  font-weight: bold;
-  margin-right: 0em;
+  font-weight: $userFontWeight;
+  margin-right: $userDistance;
   vertical-align: baseline;
 }
 .ui.feed > .event > .content .user img {
-  margin: -0.25em 0.25em 0em 0em;
-  width: auto;
-  height: 2em;
-  vertical-align: middle;
+  margin: $userImageMargin;
+  width: $userImageWidth;
+  height: $userImageHeight;
+  vertical-align: $userImageVerticalAlign;
 }
-
 /*--------------
    Inline Date
 ---------------*/
 
-
 /* Date inside Summary */
 .ui.feed > .event > .content .summary > .date {
-  display: inline-block;
-  float: none;
-  font-weight: normal;
-  font-size: 0.875em;
-  font-style: normal;
-  margin: 0em 0em 0em 0.5em;
-  padding: 0em;
-  color: rgba(0, 0, 0, 0.4);
+  display: $summaryDateDisplay;
+  float: $summaryDateFloat;
+  font-weight: $summaryDateFontWeight;
+  font-size: $summaryDateFontSize;
+  font-style: $summaryDateFontStyle;
+  margin: $summaryDateMargin;
+  padding: $summaryDatePadding;
+  color: $summaryDateColor;
 }
 
 /*--------------
@@ -164,26 +168,26 @@
 ---------------*/
 
 .ui.feed > .event > .content .extra {
-  margin: 0.5em 0em 0em;
-  background: none;
-  padding: 0em;
-  color: rgba(0, 0, 0, 0.8);
+  margin: $extraMargin;
+  background: $extraBackground;
+  padding: $extraPadding;
+  color: $extraColor;
 }
 
 /* Images */
 .ui.feed > .event > .content .extra.images img {
   display: inline-block;
-  margin: 0em 0.25em 0em 0em;
-  width: 6em;
+  margin: $extraImageMargin;
+  width: $extraImageWidth;
 }
 
 /* Text */
 .ui.feed > .event > .content .extra.text {
-  padding: 0.5em 1em;
-  border-left: 3px solid rgba(0, 0, 0, 0.2);
-  font-size: 1em;
-  max-width: 500px;
-  line-height: 1.33;
+  padding: $extraTextPadding;
+  border-left: $extraTextPointer;
+  font-size: $extraTextFontSize;
+  max-width: $extraTextMaxWidth;
+  line-height: $extraTextLineHeight;
 }
 
 /*--------------
@@ -191,39 +195,40 @@
 ---------------*/
 
 .ui.feed > .event > .content .meta {
-  display: inline-block;
-  font-size: 0.875em;
-  margin: 0.5em 0em 0em;
-  background: none;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  padding: 0em;
-  color: rgba(0, 0, 0, 0.6);
+  display: $metadataDisplay;
+  font-size: $metadataFontSize;
+  margin: $metadataMargin;
+  background: $metadataBackground;
+  border: $metadataBorder;
+  border-radius: $metadataBorderRadius;
+  box-shadow: $metadataBoxShadow;
+  padding: $metadataPadding;
+  color: $metadataColor;
 }
+
 .ui.feed > .event > .content .meta > * {
   position: relative;
-  margin-left: 0.75em;
+  margin-left: $metadataElementSpacing;
 }
 .ui.feed > .event > .content .meta > *:after {
-  content: '';
-  color: rgba(0, 0, 0, 0.2);
+  content: $metadataDivider;
+  color: $metadataDividerColor;
   top: 0em;
-  left: -1em;
+  left: $metadataDividerOffset;
   opacity: 1;
   position: absolute;
   vertical-align: top;
 }
+
 .ui.feed > .event > .content .meta .like {
-  color: '';
-  -webkit-transition: 0.2s color ease;
-          transition: 0.2s color ease;
+  color: $likeColor;
+  transition: $likeTransition;
 }
 .ui.feed > .event > .content .meta .like:hover .icon {
-  color: #ff2733;
+  color: $likeHoverColor;
 }
 .ui.feed > .event > .content .meta .active.like .icon {
-  color: #ef404a;
+  color: $likeActiveColor;
 }
 
 /* First element */
@@ -237,17 +242,17 @@
 /* Action */
 .ui.feed > .event > .content .meta a,
 .ui.feed > .event > .content .meta > .icon {
-  cursor: pointer;
-  opacity: 1;
-  color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  cursor: $metadataActionCursor;
+  opacity: $metadataActionOpacity;
+  color: $metadataActionColor;
+  transition: $metadataActionTransition;
 }
 .ui.feed > .event > .content .meta a:hover,
 .ui.feed > .event > .content .meta a:hover .icon,
 .ui.feed > .event > .content .meta > .icon:hover {
-  color: rgba(0, 0, 0, 0.8);
+  color: $metadataActionHoverColor;
 }
+
 
 
 /*******************************
@@ -255,23 +260,13 @@
 *******************************/
 
 .ui.small.feed {
-  font-size: 0.9em;
+  font-size: $small;
 }
 .ui.feed {
-  font-size: 1em;
+  font-size: $medium;
 }
 .ui.large.feed {
-  font-size: 1.1em;
+  font-size: $large;
 }
 
-
-/*******************************
-         Theme Overrides
-*******************************/
-
-
-
-/*******************************
-    User Variable Overrides
-*******************************/
-
+@include loadUIOverrides();
