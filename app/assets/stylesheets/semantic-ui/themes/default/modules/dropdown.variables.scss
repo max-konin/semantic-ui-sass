@@ -36,7 +36,9 @@ $menuBorder: $menuBorderWidth solid $borderColor;
 $menuBoxShadow: 0px 1px 4px 0px $borderColor;
 $menuBorderRadius: 0em 0em $borderRadius $borderRadius;
 $menuTransition: opacity 0.2s ease;
-$menuMinWidth: #{"calc(100% + "($menuBorderWidth * 2)~")"};
+// TODO: I don't know what is ~ in less
+// $menuMinWidth: #{"calc(100% + "($menuBorderWidth * 2)~")"};
+$menuMinWidth: #{"calc(100% + "($menuBorderWidth * 2)")"};
 $menuZIndex: 11;
 
 /* Text */

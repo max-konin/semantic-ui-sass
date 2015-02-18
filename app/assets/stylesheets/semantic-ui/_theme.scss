@@ -8,6 +8,7 @@ $themesFolder: 'themes';
 /*------------------
     Default Theme
 -------------------*/
+@import "themes/default/globals/site.variables";
 @import "themes/default/**/*";
 //@import "${themesFolder}/default/globals/site.variables";
 //@import "${themesFolder}/default/${type}s/${element}.variables";

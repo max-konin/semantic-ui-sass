@@ -36,10 +36,15 @@ $dividerIconMargin: 0rem;
 /* Horizontal / Vertical */
 $horizontalMargin: '';
 $horizontalDividerMargin: 1em;
-$horizontalRulerOffset: #{"calc(-50% - "($horizontalDividerMargin)~")"};
+
+// TODO: I don't know what is ~ in less
+//$horizontalRulerOffset: #{"calc(-50% - "($horizontalDividerMargin)~")"};
+$horizontalRulerOffset: #{"calc(-50% - "($horizontalDividerMargin)")"};
 
 $verticalDividerMargin: 1rem;
-$verticalDividerHeight: #{"calc(100% - "($verticalDividerMargin)~")"};
+// TODO: I don't know what is ~ in less
+// $verticalDividerHeight: #{"calc(100% - "($verticalDividerMargin)~")"};
+$verticalDividerHeight: #{"calc(100% - "($verticalDividerMargin)")"};
 
 /* Inverted */
 $invertedTextColor: $white;

@@ -19,7 +19,10 @@ $minWidth: 320px;
 $gutterWidth: 2rem;
 $rowSpacing: 2rem;
 
-$tableWidth: #{"calc(100% + "$gutterWidth~")"};
+// TODO: I don't know what is ~ in less
+// $tableWidth: #{"calc(100% + "$gutterWidth~")"};
+$tableWidth: #{"calc(100% + "$gutterWidth")"};
+
 $columnMaxImageWidth: 100%;
 
 /*******************************

@@ -209,23 +209,23 @@ $fontPath  : '../../themes/default/assets/fonts';
 --------------------*/
 
 /* Exact pixel values expressed in em */
-$mini            : unit( round($miniSize * $emSize) / $emSize, rem);
-$tiny            : unit( round($tinySize * $emSize) / $emSize, rem);
-$small           : unit( round($smallSize * $emSize) / $emSize, rem);
-$medium          : unit( round($mediumSize * $emSize) / $emSize, rem);
-$large           : unit( round($largeSize * $emSize) / $emSize, rem);
-$big             : unit( round($bigSize * $emSize) / $emSize, rem);
-$huge            : unit( round($hugeSize * $emSize) / $emSize, rem);
-$massive         : unit( round($massiveSize * $emSize) / $emSize, rem);
+$mini            : (round($miniSize * $emSize) / $emSize * 1rem);
+$tiny            : (round($tinySize * $emSize) / $emSize * 1rem);
+$small           : (round($smallSize * $emSize) / $emSize * 1rem);
+$medium          : (round($mediumSize * $emSize) / $emSize * 1rem);
+$large           : (round($largeSize * $emSize) / $emSize * 1rem);
+$big             : (round($bigSize * $emSize) / $emSize * 1rem);
+$huge            : (round($hugeSize * $emSize) / $emSize * 1rem);
+$massive         : (round($massiveSize * $emSize) / $emSize * 1rem);
 
-$relativeMini    : unit( round($miniSize * $emSize) / $emSize, em);
-$relativeTiny    : unit( round($tinySize * $emSize) / $emSize, em);
-$relativeSmall   : unit( round($smallSize * $emSize) / $emSize, em);
-$relativeMedium  : unit( round($mediumSize * $emSize) / $emSize, em);
-$relativeLarge   : unit( round($largeSize * $emSize) / $emSize, em);
-$relativeBig     : unit( round($bigSize * $emSize) / $emSize, em);
-$relativeHuge    : unit( round($hugeSize * $emSize) / $emSize, em);
-$relativeMassive : unit( round($massiveSize * $emSize) / $emSize, em);
+$relativeMini    : (round($miniSize * $emSize) / $emSize * 1em);
+$relativeTiny    : (round($tinySize * $emSize) / $emSize * 1em);
+$relativeSmall   : (round($smallSize * $emSize) / $emSize * 1em);
+$relativeMedium  : (round($mediumSize * $emSize) / $emSize * 1em);
+$relativeLarge   : (round($largeSize * $emSize) / $emSize * 1em);
+$relativeBig     : (round($bigSize * $emSize) / $emSize * 1em);
+$relativeHuge    : (round($hugeSize * $emSize) / $emSize * 1em);
+$relativeMassive : (round($massiveSize * $emSize) / $emSize * 1em);
 
 /*-------------------
        Icons
@@ -373,6 +373,9 @@ $transitionEasing   : ease;
     Derived Values
 --------------------*/
 
+/* Used to match floats with text */
+$lineHeightOffset    : (($lineHeight - 1em) / 2);
+
 /* Header Spacing */
 $headerLineHeightOffset : ($lineHeight - 1em) / 2;
 $headerTopMargin        : #{"calc(2rem - "$lineHeightOffset")"};
@@ -381,9 +384,6 @@ $headerMargin           : $headerTopMargin 0em $headerBottomMargin;
 
 /* Makes sure padded grid can fit at 320px */
 $pageMinWidth        : (320px - ($fontSize * 3));
-
-/* Used to match floats with text */
-$lineHeightOffset    : (($lineHeight - 1em) / 2);
 
 /* Positive / Negative Dupes */
 $successColor           : $positiveColor;
